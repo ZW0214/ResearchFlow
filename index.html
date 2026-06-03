@@ -1138,6 +1138,199 @@ aside {
     background: rgba(245,242,235,.95) !important;
   }
 }
+
+/* ══════════════════════════════════════════════════
+   手機版專屬重新設計
+   ══════════════════════════════════════════════════ */
+@media(max-width:768px){
+
+  /* ── Topbar 完全重設 ── */
+  .topbar{
+    display:grid!important;
+    grid-template-columns:auto 1fr auto auto auto auto!important;
+    grid-template-rows:auto!important;
+    align-items:center!important;
+    gap:8px!important;
+    padding:10px 14px!important;
+    flex-wrap:nowrap!important;
+    overflow:visible!important;
+  }
+
+  /* 漢堡選單 */
+  .mobile-menu-btn{
+    display:flex!important;
+    width:36px!important;height:36px!important;
+    border-radius:10px!important;
+    font-size:17px!important;
+    background:rgba(255,255,255,.7)!important;
+    border:0.5px solid rgba(0,0,0,.1)!important;
+    box-shadow:0 1px 3px rgba(0,0,0,.08)!important;
+    flex-shrink:0!important;
+  }
+
+  /* 標題縮到最小 */
+  .topbar h1{
+    font-size:14px!important;
+    font-weight:600!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+    grid-column:2!important;
+  }
+
+  /* 週月季 */
+  .view-tabs{
+    grid-column:3!important;
+    display:flex!important;
+    flex-shrink:0!important;
+    background:rgba(0,0,0,.07)!important;
+    border-radius:10px!important;
+    padding:2px!important;
+  }
+  .view-tab{
+    padding:4px 9px!important;
+    font-size:12px!important;
+    font-weight:500!important;
+    border-radius:8px!important;
+  }
+  .view-tab.active{
+    background:white!important;
+    font-weight:600!important;
+    box-shadow:0 1px 3px rgba(0,0,0,.1)!important;
+  }
+
+  /* 搜尋獨立一列（第二列） */
+  .search-wrap{
+    grid-column:1 / -1!important;
+    grid-row:2!important;
+    width:100%!important;
+  }
+  .search-input{
+    width:100%!important;
+    font-size:14px!important;
+    padding:9px 32px!important;
+    border-radius:12px!important;
+    background:rgba(255,255,255,.85)!important;
+  }
+  .search-input:focus{ width:100%!important; }
+  .search-icon{ left:10px!important; font-size:15px!important; }
+
+  /* 今天、總覽、通知按鈕 */
+  #btn-today{
+    grid-column:4!important;
+    padding:6px 10px!important;
+    font-size:12px!important;
+    border-radius:10px!important;
+    font-weight:500!important;
+  }
+  button[onclick="openDashboard()"]{
+    grid-column:5!important;
+    padding:6px 10px!important;
+    font-size:12px!important;
+    border-radius:10px!important;
+    font-weight:500!important;
+  }
+  .notif-btn{
+    grid-column:6!important;
+    width:36px!important;height:36px!important;
+    padding:0!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    border-radius:10px!important;
+    font-size:18px!important;
+  }
+
+  /* 隱藏不需要的按鈕 */
+  #btn-export,#btn-import,button[onclick="printGantt()"]{display:none!important}
+
+  /* ── 甘特圖任務欄縮窄 ── */
+  .task-label{
+    width:110px!important;min-width:110px!important;
+    padding:0 8px 0 10px!important;
+  }
+  .gh-label-month{width:110px!important;min-width:110px!important}
+  .gh-day-label{width:110px!important;min-width:110px!important}
+  .lw{width:110px!important;min-width:110px!important}
+
+  .task-name{
+    font-size:12px!important;
+    font-weight:500!important;
+  }
+  .sbadge{
+    font-size:9px!important;
+    padding:1px 6px!important;
+  }
+  .pmini{font-size:9px!important}
+  .task-row{height:46px!important}
+
+  /* ── 專案標題列 ── */
+  .proj-hdr{padding:8px 12px!important}
+  .ph-name{font-size:13px!important;font-weight:600!important}
+  .ph-add-btn{
+    width:24px!important;height:24px!important;
+    font-size:16px!important;
+    margin-right:6px!important;
+  }
+  .ph-count{font-size:10px!important}
+
+  /* ── 甘特圖日期表頭 ── */
+  .gh-day{font-size:9px!important;width:26px!important;min-width:26px!important}
+  .gh-month-cell{font-size:10px!important;font-weight:600!important;padding:3px 5px!important}
+  .bar{font-size:10px!important;font-weight:600!important}
+
+  /* ── Bottom Bar 加大 ── */
+  .mobile-bar{
+    padding:10px 16px max(16px,env(safe-area-inset-bottom))!important;
+    gap:0!important;
+    justify-content:space-around!important;
+  }
+  .mobile-bar-btn{
+    font-size:11px!important;
+    font-weight:500!important;
+    padding:6px 12px!important;
+    min-width:64px!important;
+    gap:3px!important;
+  }
+  .mobile-bar-btn .mb-icon{font-size:22px!important}
+
+  /* ── Detail Panel 手機版 ── */
+  .detail-panel{
+    position:fixed!important;
+    left:0!important;right:0!important;bottom:0!important;
+    width:100%!important;max-width:100%!important;
+    height:75vh!important;
+    border-radius:24px 24px 0 0!important;
+    border-left:none!important;
+    border-top:0.5px solid rgba(0,0,0,.1)!important;
+  }
+  .detail-panel:not(.hidden){
+    transform:translateY(0)!important;
+    display:flex!important;
+  }
+  .dp-hdr{
+    padding:14px 18px!important;
+    position:relative!important;
+  }
+  .dp-hdr::before{
+    content:'';
+    position:absolute;
+    top:8px;left:50%;transform:translateX(-50%);
+    width:36px;height:4px;
+    background:rgba(0,0,0,.15);
+    border-radius:2px;
+  }
+  .dp-title{font-size:16px!important;font-weight:600!important}
+  .dp-body{padding:16px!important;gap:14px!important}
+  .dp-in,.dp-sel{font-size:15px!important;padding:10px 12px!important}
+  .dp-lbl{font-size:11px!important}
+  .dp-save{font-size:15px!important;padding:13px!important;font-weight:600!important}
+  .dp-ta{font-size:14px!important;min-height:80px!important}
+
+  /* ── Alert Banner ── */
+  .alert-banner{
+    font-size:12px!important;
+    padding:8px 14px!important;
+  }
+}
 </style>
 </head>
 <body>
