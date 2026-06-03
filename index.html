@@ -572,6 +572,24 @@ aside{border-radius:0 16px 16px 0}
   body{background:white!important}
   .bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
+
+@media(max-width:768px){
+  main{display:flex;flex-direction:column;height:100%;overflow:hidden}
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    padding-top:max(10px,env(safe-area-inset-top))!important;
+    flex-wrap:wrap;gap:6px;flex-shrink:0;
+  }
+  .alert-banner{flex-shrink:0}
+  .content-area{flex:1;overflow:hidden;min-height:0}
+  .gantt-scroll{height:100%;overflow:auto;-webkit-overflow-scrolling:touch}
+  /* 搜尋欄在手機縮小 */
+  .search-input{width:100px!important}
+  .search-input:focus{width:130px!important}
+  /* topbar 按鈕字縮小 */
+  .topbar .ctrl-btn{font-size:10px!important;padding:4px 7px!important}
+  .topbar h1{font-size:12px!important}
+}
 </style>
 </head>
 <body>
