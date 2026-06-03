@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2ODAgNjgwIj4KPGRlZnM+PGNsaXBQYXRoIGlkPSJyYzMiPjxyZWN0IHg9IjkwIiB5PSI5MCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIHJ4PSIxMTAiLz48L2NsaXBQYXRoPjwvZGVmcz4KPHJlY3QgeD0iOTAiIHk9IjkwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgcng9IjExMCIgZmlsbD0iI2U4ZjdmMCIvPgo8ZyBjbGlwLXBhdGg9InVybCgjcmMzKSI+CjxyZWN0IHg9IjkwIiB5PSI5MCIgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiNlOGY3ZjAiLz4KPGxpbmUgeDE9IjE1MiIgeTE9IjIwMCIgeDI9IjUzMCIgeTI9IjIwMCIgc3Ryb2tlPSIjYmVlOGQwIiBzdHJva2Utd2lkdGg9IjEiLz4KPGxpbmUgeDE9IjE1MiIgeTE9IjIzMCIgeDI9IjUzMCIgeTI9IjIzMCIgc3Ryb2tlPSIjYmVlOGQwIiBzdHJva2Utd2lkdGg9IjEiLz4KPGxpbmUgeDE9IjE1MiIgeTE9IjI2MCIgeDI9IjUzMCIgeTI9IjI2MCIgc3Ryb2tlPSIjYmVlOGQwIiBzdHJva2Utd2lkdGg9IjEiLz4KPGxpbmUgeDE9IjE1MiIgeTE9IjI5MCIgeDI9IjUzMCIgeTI9IjI5MCIgc3Ryb2tlPSIjYmVlOGQwIiBzdHJva2Utd2lkdGg9IjEiLz4KPGxpbmUgeDE9IjE1MiIgeTE9IjMyMCIgeDI9IjUzMCIgeTI9IjMyMCIgc3Ryb2tlPSIjYmVlOGQwIiBzdHJva2Utd2lkdGg9IjEiLz4KPGxpbmUgeDE9IjE1MiIgeTE9IjM1MCIgeDI9IjUzMCIgeTI9IjM1MCIgc3Ryb2tlPSIjYmVlOGQwIiBzdHJva2Utd2lkdGg9IjEiLz4KPGxpbmUgeDE9IjE1MiIgeTE9IjM4MCIgeDI9IjUzMCIgeTI9IjM4MCIgc3Ryb2tlPSIjYmVlOGQwIiBzdHJva2Utd2lkdGg9IjEiLz4KPHJlY3QgeD0iMTUyIiB5PSIyMDAiIHdpZHRoPSIxLjUiIGhlaWdodD0iMTgwIiBmaWxsPSIjMGQ5ZTYyIiBvcGFjaXR5PSIwLjQiLz4KPHJlY3QgeD0iMTYwIiB5PSIyMTIiIHdpZHRoPSIxODAiIGhlaWdodD0iMjIiIHJ4PSI2IiBmaWxsPSIjMGQ5ZTYyIi8+CjxyZWN0IHg9IjE2MCIgeT0iMjQyIiB3aWR0aD0iMjYwIiBoZWlnaHQ9IjIyIiByeD0iNiIgZmlsbD0iIzE0Yjg3YSIgb3BhY2l0eT0iMC44NSIvPgo8cmVjdCB4PSIxNjAiIHk9IjI3MiIgd2lkdGg9IjExMCIgaGVpZ2h0PSIyMiIgcng9IjYiIGZpbGw9IiMzNGQzOTkiIG9wYWNpdHk9IjAuOCIvPgo8cmVjdCB4PSIxNjAiIHk9IjMwMiIgd2lkdGg9IjIyMCIgaGVpZ2h0PSIyMiIgcng9IjYiIGZpbGw9IiM2ZWU3YjciIG9wYWNpdHk9IjAuOSIvPgo8cmVjdCB4PSIxNjAiIHk9IjMzMiIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyMiIgcng9IjYiIGZpbGw9IiMwNTk2NjkiLz4KPHJlY3QgeD0iMTYwIiB5PSIyMTIiIHdpZHRoPSI3MCIgaGVpZ2h0PSIyMiIgcng9IjYiIGZpbGw9IiMwNjVmNDYiIG9wYWNpdHk9IjAuMyIvPgo8cmVjdCB4PSIxNjAiIHk9IjMzMiIgd2lkdGg9IjYwIiBoZWlnaHQ9IjIyIiByeD0iNiIgZmlsbD0iIzA2NGUzYiIgb3BhY2l0eT0iMC4zIi8+CjxsaW5lIHgxPSIzMTAiIHkxPSIyMDAiIHgyPSIzMTAiIHkyPSIzODAiIHN0cm9rZT0iIzBkOWU2MiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI0LDQiIG9wYWNpdHk9IjAuNSIvPgo8Y2lyY2xlIGN4PSIzMTAiIGN5PSIyMDAiIHI9IjUiIGZpbGw9IiMwZDllNjIiIG9wYWNpdHk9IjAuOSIvPgo8dGV4dCB4PSIzNDAiIHk9IjQ2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sQmxpbmtNYWNTeXN0ZW1Gb250LFNlZ29lIFVJLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzYiIGZvbnQtd2VpZ2h0PSI3MDAiIGxldHRlci1zcGFjaW5nPSI2IiBmaWxsPSIjMGYyZDFlIj5SRVNFQVJDSDwvdGV4dD4KPHRleHQgeD0iMzQwIiB5PSI0OTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLEJsaW5rTWFjU3lzdGVtRm9udCxTZWdvZSBVSSxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iNDAwIiBsZXR0ZXItc3BhY2luZz0iMTAiIGZpbGw9IiMwZDllNjIiPkZMT1c8L3RleHQ+CjwvZz4KPHJlY3QgeD0iOTAiIHk9IjkwIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgcng9IjExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYmVlOGQwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8L3N2Zz4=">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSIjZThmN2YwIi8+CjxsaW5lIHgxPSIxNCIgeTE9IjIwIiB4Mj0iNTIiIHkyPSIyMCIgc3Ryb2tlPSIjYmVlOGQwIiBzdHJva2Utd2lkdGg9IjEiLz4KPGxpbmUgeDE9IjE0IiB5MT0iMjgiIHgyPSI1MiIgeTI9IjI4IiBzdHJva2U9IiNiZWU4ZDAiIHN0cm9rZS13aWR0aD0iMSIvPgo8bGluZSB4MT0iMTQiIHkxPSIzNiIgeDI9IjUyIiB5Mj0iMzYiIHN0cm9rZT0iI2JlZThkMCIgc3Ryb2tlLXdpZHRoPSIxIi8+CjxsaW5lIHgxPSIxNCIgeTE9IjQ0IiB4Mj0iNTIiIHkyPSI0NCIgc3Ryb2tlPSIjYmVlOGQwIiBzdHJva2Utd2lkdGg9IjEiLz4KPHJlY3QgeD0iMTQiIHk9IjIyIiB3aWR0aD0iMjIiIGhlaWdodD0iNyIgcng9IjIiIGZpbGw9IiMwZDllNjIiLz4KPHJlY3QgeD0iMTQiIHk9IjMwIiB3aWR0aD0iMzIiIGhlaWdodD0iNyIgcng9IjIiIGZpbGw9IiMxNGI4N2EiIG9wYWNpdHk9IjAuODUiLz4KPHJlY3QgeD0iMTQiIHk9IjM4IiB3aWR0aD0iMTYiIGhlaWdodD0iNyIgcng9IjIiIGZpbGw9IiMzNGQzOTkiIG9wYWNpdHk9IjAuOCIvPgo8bGluZSB4MT0iMzQiIHkxPSIxOCIgeDI9IjM0IiB5Mj0iNDciIHN0cm9rZT0iIzBkOWU2MiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1kYXNoYXJyYXk9IjMsMyIgb3BhY2l0eT0iMC41Ii8+CjxjaXJjbGUgY3g9IjM0IiBjeT0iMTkiIHI9IjIuNSIgZmlsbD0iIzBkOWU2MiIvPgo8L3N2Zz4=">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ResearchFlow">
+<meta name="theme-color" content="#0f0f13">
+<link rel="manifest" href="data:application/json;charset=utf-8,%7B%22name%22%3A%22ResearchFlow%22%2C%22short_name%22%3A%22ResearchFlow%22%2C%22start_url%22%3A%22.%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230f0f13%22%2C%22theme_color%22%3A%22%230f0f13%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fplacehold.co%2F192x192%2F7c6ff7%2Ffff%3Ftext%3DRF%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ResearchFlow</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#ffffff;--surface:#f5f2eb;--surface2:#ede8de;--border:#c8d4b8;--accent:#0d9e62;--accent2:#14b87a;--text:#1a2e1e;--muted:#4a7a60;--green:#0d9e62;--amber:#d97706;--red:#e11d48;--day-w:28}
+html,body{height:100%;overflow:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:14px}
+#app{display:flex;height:100vh;overflow:hidden}
+
+aside{width:200px;min-width:200px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0}
+.sidebar-header{padding:14px 16px;border-bottom:1px solid var(--border)}
+.logo{font-size:14px;font-weight:700;letter-spacing:2px;color:var(--accent2);text-transform:uppercase}
+.logo span{color:var(--muted)}
+.sidebar-sec{padding:10px 16px;font-size:9px;letter-spacing:1.5px;color:var(--muted)!important;text-transform:uppercase;border-bottom:1px solid var(--border)}
+.project-list{flex:1;overflow-y:auto;padding:6px}
+.proj-item{padding:7px 10px;border-radius:6px;cursor:pointer;margin-bottom:2px;display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);transition:all .15s}
+.proj-item:hover,.proj-item.active{background:var(--surface2);color:var(--text)}
+.proj-item.active{border-left:2px solid var(--accent)}
+.proj-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.add-btn{margin:8px 8px 0;padding:7px;border:1px dashed var(--border);background:none;color:var(--muted);cursor:pointer;border-radius:6px;font-size:11px;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .2s}
+.add-btn:hover{border-color:var(--accent);color:var(--accent)}
+.theme-section{padding:10px 12px;border-top:1px solid var(--border)}
+.theme-label{font-size:9px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:7px}
+.theme-presets{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:7px}
+.theme-dot{width:36px;height:28px;border-radius:6px;cursor:pointer;border:1.5px solid transparent;transition:all .2s cubic-bezier(.34,1.56,.64,1);flex-shrink:0;position:relative}
+.theme-dot:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(0,0,0,.25)!important}
+.theme-dot.active{border-width:2px!important}
+
+.custom-color-row{display:flex;align-items:center;gap:8px}
+.custom-color-label{font-size:10px;color:var(--muted)}
+.custom-color-input{width:26px;height:26px;border:1px solid var(--border);border-radius:5px;cursor:pointer;padding:1px;background:none}
+
+main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:10px 16px;display:flex;align-items:center;gap:10px;flex-shrink:0}
+.topbar h1{font-size:15px;font-weight:600;color:var(--text)!important;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.view-tabs{display:flex;gap:2px;background:var(--bg);border-radius:5px;padding:2px}
+.view-tab{padding:4px 11px;font-size:12px;border:none;background:none;color:var(--muted);cursor:pointer;border-radius:3px;font-family:inherit;transition:all .2s}
+.view-tab.active{background:var(--surface2);color:var(--text)}
+.ctrl-btn{padding:5px 11px;font-size:12px;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer;border-radius:4px;font-family:inherit;transition:all .2s;white-space:nowrap}
+.ctrl-btn:hover{border-color:var(--accent);color:var(--accent)}
+.save-ind{font-size:10px;color:var(--green);opacity:0;transition:opacity .5s;white-space:nowrap}
+.save-ind.show{opacity:1}
+.alert-banner{background:rgba(251,191,36,.1);border-bottom:1px solid rgba(251,191,36,.3);padding:5px 16px;font-size:11px;color:var(--amber);display:none;gap:8px;align-items:center;flex-shrink:0}
+.alert-banner.show{display:flex}
+.content-area{flex:1;display:flex;overflow:hidden;min-height:0}
+
+.gantt-scroll{flex:1;overflow:auto;position:relative}
+.gantt-root{display:inline-block;min-width:100%;vertical-align:top}
+
+.lw{width:220px;min-width:220px;flex-shrink:0}
+.gh-wrap{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:2px solid var(--border);display:inline-flex;flex-direction:column;min-width:100%;color:var(--text)}
+.gh-month-row{display:flex}
+.gh-label-month{width:220px;min-width:220px;flex-shrink:0;border-right:1px solid var(--border);padding:4px 8px;font-size:9px;color:var(--muted)!important;display:flex;align-items:center}
+.gh-months{display:flex}
+.gh-month-cell{border-right:1px solid var(--border);padding:3px 6px;font-size:10px;color:var(--muted)!important;white-space:nowrap;display:flex;align-items:center;flex-shrink:0}
+.gh-day-row{display:flex;border-top:1px solid var(--border)}
+.gh-day-label{width:220px;min-width:220px;flex-shrink:0;border-right:1px solid var(--border);padding:3px 8px;font-size:9px;color:var(--muted);display:flex;align-items:center}
+.gh-days{display:flex}
+.gh-day{flex-shrink:0;border-right:1px solid var(--border);text-align:center;font-size:9px;padding:3px 0;color:var(--muted)!important}
+.gh-day.weekend{background:rgba(255,255,255,.02)}
+.gh-day.today-col{background:rgba(13,158,98,.15);color:var(--accent);font-weight:700}
+
+.gantt-body{display:inline-block;min-width:100%}
+.proj-hdr{display:flex;align-items:center;padding:7px 12px;background:var(--surface2);gap:8px;border-bottom:1px solid var(--border);cursor:pointer;user-select:none}
+.proj-hdr:hover{background:var(--border)}
+.ph-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.ph-name{font-size:13px;font-weight:600;color:var(--text)!important;flex:1}
+.ph-count{font-size:10px;color:var(--muted)!important}
+.ph-arrow{font-size:10px;color:var(--muted);transition:transform .22s;display:inline-block}
+.ph-arrow.collapsed{transform:rotate(-90deg)}
+.task-row{display:flex;align-items:center;border-bottom:1px solid var(--border);height:42px;cursor:pointer;transition:background .12s}
+.task-row:hover{background:rgba(13,158,98,.06)}
+.task-row.selected{background:rgba(13,158,98,.1)}
+.task-label{width:220px;min-width:220px;flex-shrink:0;padding:0 12px 0 28px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:2px;justify-content:center;height:100%}
+.task-name{font-size:12px;color:var(--text)!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.task-meta{display:flex;align-items:center;gap:5px}
+.sbadge{font-size:9px;padding:2px 6px;border-radius:3px;font-weight:700;letter-spacing:.4px}
+.s-not_started{background:rgba(139,138,158,.15);color:var(--muted)}
+.s-in_progress{background:rgba(124,111,247,.2);color:var(--accent2)}
+.s-done{background:rgba(74,222,128,.15);color:var(--green)}
+.s-delayed{background:rgba(248,113,113,.15);color:var(--red)}
+.pmini{font-size:9px;color:var(--muted)}
+.task-tl{display:flex;position:relative;height:42px;align-items:center}
+.day-cell{flex-shrink:0;height:100%;border-right:1px solid rgba(46,46,62,.6)}
+.day-cell.weekend{background:rgba(255,255,255,.012)}
+.day-cell.today-col{background:rgba(13,158,98,.06)}
+.bar{position:absolute;top:7px;height:28px;border-radius:4px;cursor:grab;display:flex;align-items:center;overflow:hidden;z-index:3;min-width:4px;user-select:none}
+.bar:active{cursor:grabbing}
+.bar-prog{position:absolute;left:0;top:0;bottom:0;background:rgba(0,0,0,.25);border-radius:4px 0 0 4px;pointer-events:none}
+.bar-lh,.bar-rh{position:absolute;top:0;bottom:0;width:7px;cursor:ew-resize;background:rgba(255,255,255,.2);z-index:4}
+.bar-lh{left:0;border-radius:4px 0 0 4px}
+.bar-rh{right:0;border-radius:0 4px 4px 0}
+.bar-lbl{position:relative;z-index:1;pointer-events:none;text-shadow:0 1px 2px rgba(0,0,0,.5);font-size:10px;font-weight:600;color:rgba(255,255,255,.95);padding:0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.today-vline{position:absolute;top:0;bottom:0;width:2px;background:var(--accent2);opacity:.75;pointer-events:none;z-index:10}
+.empty-row{display:flex;height:50px;align-items:center;justify-content:center;color:var(--muted);font-size:11px;border-bottom:1px solid var(--border);width:100%}
+
+/* ── Detail Panel ── */
+.detail-panel{width:290px;min-width:290px;background:var(--surface);border-left:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0}
+.detail-panel.hidden{display:none}
+.dp-hdr{padding:14px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.dp-title{font-size:13px;font-weight:600;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dp-close{background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;line-height:1;padding:0 2px}
+.dp-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:13px}
+.dp-field{display:flex;flex-direction:column;gap:4px}
+.dp-lbl{font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+.dp-in{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 9px;border-radius:5px;font-size:12px;font-family:inherit;width:100%;transition:border .15s}
+.dp-in:focus{outline:none;border-color:var(--accent)}
+.dp-sel{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 9px;border-radius:5px;font-size:12px;font-family:inherit;width:100%;cursor:pointer}
+.dp-ta{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:7px 9px;border-radius:5px;font-size:12px;font-family:inherit;resize:vertical;min-height:72px;width:100%}
+.dp-ta:focus{outline:none;border-color:var(--accent)}
+.prog-track{height:5px;background:var(--border);border-radius:3px;overflow:hidden;margin-bottom:4px}
+.prog-fill{height:100%;border-radius:3px;background:var(--accent);transition:width .2s}
+.prog-row{display:flex;align-items:center;gap:8px}
+.dp-range{flex:1;accent-color:var(--accent)}
+.warn-box{background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.3);border-radius:5px;padding:8px 10px;font-size:11px;color:var(--red);line-height:1.5}
+.dp-save{width:100%;padding:8px;background:var(--accent);border:none;color:#fff;border-radius:5px;font-size:12px;font-family:inherit;font-weight:600;cursor:pointer;transition:opacity .2s}
+.dp-save:hover{opacity:.85}
+.dp-del{width:100%;padding:6px;background:none;border:1px solid rgba(248,113,113,.4);color:var(--red);border-radius:5px;font-size:11px;font-family:inherit;cursor:pointer;transition:all .2s}
+.dp-del:hover{background:rgba(248,113,113,.1)}
+
+/* ── Date Picker ── */
+.datepicker-wrap{position:relative;width:100%}
+.datepicker-btn{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:5px;font-size:12px;font-family:inherit;cursor:pointer;text-align:left;display:flex;align-items:center;justify-content:space-between;transition:border .15s}
+.datepicker-btn:hover,.datepicker-btn.open{border-color:var(--accent)}
+.datepicker-btn .cal-icon{font-size:14px;color:var(--muted)}
+.datepicker-pop{position:fixed;z-index:999;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;width:240px;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.dp-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.dp-nav-btn{background:none;border:1px solid var(--border);color:var(--text);width:26px;height:26px;border-radius:5px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.dp-nav-btn:hover{border-color:var(--accent);color:var(--accent)}
+.dp-month-title{font-size:12px;font-weight:600;color:var(--text);cursor:pointer;padding:2px 8px;border-radius:4px;transition:background .15s}
+.dp-month-title:hover{background:var(--surface2)}
+.dp-weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:4px}
+.dp-wd{text-align:center;font-size:9px;color:var(--muted);padding:2px 0}
+.dp-days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.dp-day{text-align:center;font-size:11px;padding:5px 2px;border-radius:5px;cursor:pointer;color:var(--muted);transition:all .15s;border:1px solid transparent}
+.dp-day:hover{background:var(--surface2);color:var(--text)}
+.dp-day.in-month{color:var(--text)}
+.dp-day.today{border-color:var(--accent);color:var(--accent2)}
+.dp-day.selected{background:var(--accent);color:#fff;border-color:var(--accent)}
+.dp-day.weekend{opacity:.6}
+.dp-day.empty{cursor:default}
+.dp-day.empty:hover{background:none}
+/* year/month picker */
+.dp-ym-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:6px}
+.dp-ym-item{text-align:center;padding:7px 4px;border-radius:5px;cursor:pointer;font-size:11px;color:var(--muted);transition:all .15s}
+.dp-ym-item:hover{background:var(--surface2);color:var(--text)}
+.dp-ym-item.selected{background:var(--accent);color:#fff}
+
+/* ── Modal ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:200;display:flex;align-items:center;justify-content:center}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px;width:340px;max-width:92vw}
+.modal h2{font-size:13px;font-weight:600;margin-bottom:14px;color:var(--text)}
+.mf{margin-bottom:11px;display:flex;flex-direction:column;gap:4px}
+.ml{font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+.mi{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:7px 9px;border-radius:5px;font-size:12px;font-family:inherit;width:100%}
+.mi:focus{outline:none;border-color:var(--accent)}
+.modal-actions{display:flex;gap:8px;margin-top:14px;justify-content:flex-end}
+.m-cancel{padding:6px 13px;border:1px solid var(--border);background:none;color:var(--muted);border-radius:5px;font-size:12px;font-family:inherit;cursor:pointer}
+.m-confirm{padding:6px 13px;background:var(--accent);border:none;color:#fff;border-radius:5px;font-size:12px;font-family:inherit;cursor:pointer;font-weight:600}
+.cp-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:2px}
+.cp-dot{width:20px;height:20px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .18s;flex-shrink:0}
+.cp-dot.sel{border-color:#fff;transform:scale(1.2)}
+
+/* ── Login Screen ── */
+
+.login-divider{font-size:11px;color:#4a7a60;display:flex;align-items:center;gap:8px;width:100%}
+.login-divider::before,.login-divider::after{content:'';flex:1;height:1px;background:#bee8d0}
+.guest-btn{width:100%;padding:9px 16px;background:#f0faf6;border:1.5px solid #0d9e62;color:#0d9e62;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s cubic-bezier(.34,1.56,.64,1);letter-spacing:.3px}
+.guest-btn:hover{background:rgba(255,255,255,.12);transform:translateY(-1px);box-shadow:0 3px 10px rgba(0,0,0,.2)}
+.guest-btn:active{transform:scale(.97)}
+.login-note{font-size:10px;color:#4a7a60;text-align:center}
+.guest-badge{font-size:9px;background:var(--accent);color:#fff;border:none;padding:2px 7px;border-radius:3px;letter-spacing:.5px;font-weight:600;opacity:.9}
+
+#login-screen{position:fixed;inset:0;background:#e8f7f0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:1000;gap:20px}
+.login-logo{font-size:28px;font-weight:700;letter-spacing:3px;color:#0d9e62;text-transform:uppercase}.login-logo span{color:#4a7a60}
+.login-subtitle{font-size:13px;color:#8b8a9e;letter-spacing:1px}
+.login-card{background:#1a1a22;border:1px solid #2e2e3e;border-radius:14px;padding:32px 36px;display:flex;flex-direction:column;align-items:center;gap:16px;width:300px}
+.login-card h2{font-size:15px;font-weight:600;color:#0f2d1e!important;margin:0}
+.login-card p{font-size:12px;color:#4a7a60!important;text-align:center;line-height:1.6;margin:0}
+.google-btn{display:flex;align-items:center;gap:10px;background:#fff;color:#1a1a2e;border:none;border-radius:8px;padding:10px 20px;font-size:13px;font-weight:600;cursor:pointer;width:100%;justify-content:center;transition:opacity .2s;font-family:inherit}
+.google-btn:hover{opacity:.9}
+.google-btn img{width:18px;height:18px}
+.login-error{font-size:11px;color:#f87171;text-align:center}
+/* ── User bar in sidebar ── */
+.user-bar{padding:10px 12px;border-top:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.user-avatar{width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.user-avatar-placeholder{width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0}
+.user-name{font-size:11px;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.logout-btn{background:none;border:none;color:var(--muted);cursor:pointer;font-size:10px;padding:2px 6px;border-radius:3px;font-family:inherit;transition:all .15s}
+.logout-btn:hover{color:var(--red)}
+/* ── Sync indicator ── */
+.sync-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;flex-shrink:0}
+.sync-dot.syncing{background:#fbbf24;animation:pulse .8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+
+/* ── Collapse animation ── */
+.task-group-wrap{overflow:hidden;transition:max-height .32s cubic-bezier(.4,0,.2,1),opacity .28s ease}
+.task-group-wrap.collapsed{max-height:0!important;opacity:0}
+.ph-arrow{transition:transform .28s cubic-bezier(.4,0,.2,1)!important}
+
+/* ── Animations & Depth ── */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+
+#login-screen{animation:fadeIn .4s ease}
+.login-card{animation:scaleIn .35s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 32px rgba(0,0,0,.45),0 1px 0 rgba(255,255,255,.06) inset}
+.login-logo{animation:fadeInUp .4s .1s both ease}
+.login-subtitle{animation:fadeInUp .4s .18s both ease}
+.google-btn{box-shadow:0 2px 8px rgba(0,0,0,.25);transition:all .2s cubic-bezier(.34,1.56,.64,1)}
+.google-btn:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.google-btn:active{transform:scale(.97)}
+
+aside{box-shadow:2px 0 12px rgba(0,0,0,.3)}
+.proj-item{transition:all .18s cubic-bezier(.34,1.56,.64,1)}
+.proj-item:hover{transform:translateX(2px)}
+.proj-item.active{transform:translateX(3px);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+
+.task-row{transition:background .15s ease,box-shadow .15s ease}
+.task-row:hover{box-shadow:inset 3px 0 0 var(--accent);background:rgba(13,158,98,.06)}
+.task-row.selected{box-shadow:inset 3px 0 0 var(--accent2);background:rgba(13,158,98,.1)}
+
+.proj-hdr{transition:background .15s ease}
+.ctrl-btn{transition:all .18s cubic-bezier(.34,1.56,.64,1);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.ctrl-btn:hover{transform:translateY(-1px);box-shadow:0 3px 8px rgba(0,0,0,.3)}
+.ctrl-btn:active{transform:scale(.96)}
+
+.view-tab{transition:all .18s ease}
+.view-tab.active{box-shadow:0 1px 4px rgba(0,0,0,.25)}
+
+.detail-panel{animation:slideInRight .25s cubic-bezier(.25,.46,.45,.94);box-shadow:-4px 0 16px rgba(0,0,0,.25)}
+.detail-panel.hidden{display:none}
+
+.dp-save{transition:all .2s cubic-bezier(.34,1.56,.64,1);box-shadow:0 2px 8px rgba(59,130,246,.3)}
+.dp-save:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(59,130,246,.45)}
+.dp-save:active{transform:scale(.97)}
+.dp-del{transition:all .18s ease}
+.dp-del:hover{transform:translateY(-1px)}
+
+.add-btn{transition:all .2s cubic-bezier(.34,1.56,.64,1)}
+.add-btn:hover{transform:translateY(-1px)}
+
+.bar{transition:filter .15s ease,box-shadow .15s ease}
+.bar:hover{box-shadow:0 3px 12px rgba(0,0,0,.4);filter:brightness(1.12)}
+
+.datepicker-btn{transition:all .18s ease;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.datepicker-btn:hover{box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.datepicker-pop{animation:scaleIn .18s cubic-bezier(.34,1.56,.64,1);box-shadow:0 12px 40px rgba(0,0,0,.5),0 1px 0 rgba(255,255,255,.06) inset}
+
+.modal{animation:scaleIn .22s cubic-bezier(.34,1.56,.64,1);box-shadow:0 16px 48px rgba(0,0,0,.6),0 1px 0 rgba(255,255,255,.06) inset}
+.modal-overlay{animation:fadeIn .2s ease}
+
+.gh-wrap{box-shadow:0 2px 8px rgba(0,0,0,.2)}
+
+.sbadge{box-shadow:0 1px 2px rgba(0,0,0,.2)}
+
+.theme-dot{box-shadow:0 2px 6px rgba(0,0,0,.3);transition:all .2s cubic-bezier(.34,1.56,.64,1)}
+.theme-dot:hover{transform:scale(1.2);box-shadow:0 4px 10px rgba(0,0,0,.4)}
+.theme-dot.active{box-shadow:0 0 0 2px #fff,0 4px 10px rgba(0,0,0,.4)}
+
+.cp-dot{box-shadow:0 2px 4px rgba(0,0,0,.3)}
+.cp-dot:hover{transform:scale(1.15);box-shadow:0 3px 8px rgba(0,0,0,.4)}
+
+.save-ind{animation:fadeIn .3s ease}
+
+.proj-hdr{box-shadow:0 1px 3px rgba(0,0,0,.15)}
+
+/* Gantt header depth */
+.gh-wrap{border-bottom:1.5px solid var(--border)}
+
+/* ── Theme Open Button ── */
+.theme-open-btn{margin:8px;padding:9px 12px;border:1px solid var(--border);background:var(--surface2);color:var(--text);cursor:pointer;border-radius:8px;font-size:12px;font-family:inherit;display:flex;align-items:center;gap:8px;transition:all .2s;width:calc(100% - 16px)}
+.theme-open-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--surface)}
+
+/* ── Theme Popup ── */
+.theme-popup-overlay{position:fixed;inset:0;z-index:500;display:none}
+.theme-popup-overlay.show{display:block}
+.theme-popup{position:fixed;left:16px;bottom:80px;width:280px;background:var(--surface);border:1px solid var(--border);border-radius:14px;z-index:501;display:none;flex-direction:column;box-shadow:0 16px 48px rgba(0,0,0,.25),0 1px 0 rgba(255,255,255,.1) inset;animation:scaleIn .22s cubic-bezier(.34,1.56,.64,1)}
+.theme-popup.show{display:flex}
+.theme-popup-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--border)}
+.theme-popup-title{font-size:14px;font-weight:600;color:var(--text)}
+.theme-popup-close{background:none;border:none;color:var(--muted);cursor:pointer;font-size:20px;line-height:1;padding:0 4px;transition:color .15s}
+.theme-popup-close:hover{color:var(--red)}
+.theme-popup-body{padding:16px;display:flex;flex-direction:column;gap:10px}
+.theme-popup-group-label{font-size:10px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:8px}
+.theme-presets-dark,.theme-presets-light{display:flex;flex-wrap:wrap;gap:8px}
+.theme-popup-divider{height:1px;background:var(--border);margin:4px 0}
+.custom-color-row{display:flex;align-items:center;gap:10px}
+.custom-color-label{font-size:12px;color:var(--muted);flex:1}
+.custom-color-input{width:36px;height:36px;border:1.5px solid var(--border);border-radius:8px;cursor:pointer;padding:2px;background:none}
+
+/* 主題圓點改大一點在彈窗內 */
+.theme-popup .theme-dot{width:44px;height:34px;border-radius:8px}
+
+/* ── Mobile Responsive ── */
+@media (max-width: 768px) {
+  /* 側欄改成隱藏抽屜 */
+  aside{
+    position:fixed!important;left:0;top:0;bottom:0;
+    width:80vw!important;max-width:300px;
+    z-index:200;transform:translateX(-100%);
+    transition:transform .3s cubic-bezier(.25,.46,.45,.94);
+    box-shadow:4px 0 24px rgba(0,0,0,.15);
+  }
+  aside.mobile-open{transform:translateX(0)}
+  .mobile-drawer-overlay{
+    position:fixed;inset:0;background:rgba(0,0,0,.4);
+    z-index:199;display:none;
+  }
+  .mobile-drawer-overlay.show{display:block}
+
+  /* main 全屏 */
+  #app{flex-direction:column}
+  main{flex:1;width:100%;overflow:hidden}
+
+  /* topbar 精簡 */
+  .topbar{padding:8px 12px;gap:8px;flex-wrap:nowrap}
+  .topbar h1{font-size:13px;white-space:nowrap;flex:1}
+  .view-tabs{flex-shrink:0}
+  .view-tab{padding:3px 7px;font-size:11px}
+  .ctrl-btn{padding:4px 8px;font-size:11px;flex-shrink:0}
+  #btn-export,#btn-import,#btn-today{display:none}
+  #btn-add-task{display:none}
+
+  /* 漢堡選單按鈕 */
+  .mobile-menu-btn{
+    display:flex!important;align-items:center;justify-content:center;
+    width:34px;height:34px;border-radius:8px;
+    background:none;border:1px solid var(--border);
+    color:var(--text);cursor:pointer;font-size:18px;flex-shrink:0;
+  }
+
+  /* 甘特圖 */
+  .content-area{flex-direction:column}
+  .gantt-scroll{flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
+  .task-label{width:120px!important;min-width:120px!important;padding:0 6px 0 12px}
+  .gh-label-month{width:120px!important;min-width:120px!important;font-size:8px}
+  .gh-day-label{width:120px!important;min-width:120px!important}
+  .lw{width:120px!important;min-width:120px!important}
+  .task-name{font-size:11px!important}
+  .sbadge{font-size:8px!important}
+  .pmini{display:none}
+
+  /* detail panel 全屏底部彈出 */
+  .detail-panel{
+    position:fixed!important;left:0;right:0;bottom:0;
+    width:100%!important;min-width:0!important;
+    height:70vh;border-left:none;
+    border-top:1px solid var(--border);
+    border-radius:16px 16px 0 0;
+    z-index:150;transform:translateY(100%);
+    transition:transform .3s cubic-bezier(.25,.46,.45,.94);
+    box-shadow:0 -4px 24px rgba(0,0,0,.15);
+  }
+  .detail-panel.show-mobile{transform:translateY(0)!important}
+  .detail-panel:not(.hidden){transform:translateY(0)}
+
+  /* 底部工具列 */
+  .mobile-bar{
+    display:flex!important;align-items:center;justify-content:space-around;
+    padding:8px 8px;background:var(--surface);
+    border-top:1px solid var(--border);
+    padding-bottom:max(8px,env(safe-area-inset-bottom));
+    flex-shrink:0;
+  }
+  .mobile-bar-btn{
+    display:flex;flex-direction:column;align-items:center;gap:2px;
+    background:none;border:none;color:var(--muted);cursor:pointer;
+    font-size:10px;font-family:inherit;padding:4px 10px;border-radius:8px;
+    transition:all .2s;min-width:56px;
+  }
+  .mobile-bar-btn:active{color:var(--accent);background:var(--surface2)}
+  .mobile-bar-btn .mb-icon{font-size:22px;line-height:1}
+
+  .theme-popup{
+    left:8px!important;right:8px!important;
+    width:auto!important;bottom:75px!important;
+  }
+  .save-ind{display:none}
+}
+
+@media (min-width:769px){
+  .mobile-bar{display:none!important}
+  .mobile-menu-btn{display:none!important}
+  .mobile-drawer-overlay{display:none!important}
+}
+
+/* ── Rounder UI ── */
+.ctrl-btn{border-radius:10px!important}
+.view-tab{border-radius:8px!important}
+.view-tabs{border-radius:10px!important}
+.proj-item{border-radius:10px!important}
+.add-btn{border-radius:12px!important}
+.task-row{border-radius:0}
+.proj-hdr{border-radius:0}
+.dp-in{border-radius:10px!important}
+.dp-sel{border-radius:10px!important}
+.dp-ta{border-radius:10px!important}
+.dp-save{border-radius:12px!important}
+.dp-del{border-radius:12px!important}
+.dp-hdr{border-radius:0}
+.detail-panel{border-radius:16px 0 0 16px}
+.modal{border-radius:20px!important}
+.mi{border-radius:10px!important}
+.m-cancel{border-radius:10px!important}
+.m-confirm{border-radius:10px!important}
+.datepicker-btn{border-radius:10px!important}
+.datepicker-pop{border-radius:16px!important}
+.dp-day{border-radius:8px!important}
+.dp-ym-item{border-radius:8px!important}
+.dp-nav-btn{border-radius:8px!important}
+.bar{border-radius:8px!important}
+.bar-lh{border-radius:8px 0 0 8px!important}
+.bar-rh{border-radius:0 8px 8px 0!important}
+.theme-popup{border-radius:20px!important}
+.theme-open-btn{border-radius:12px!important}
+.theme-dot{border-radius:12px!important}
+.login-card{border-radius:24px!important}
+.google-btn{border-radius:14px!important}
+.guest-btn{border-radius:14px!important}
+.mobile-bar-btn{border-radius:12px!important}
+.mobile-menu-btn{border-radius:10px!important}
+.user-bar{border-radius:0}
+.sbadge{border-radius:6px!important}
+.gh-wrap{border-radius:0}
+.topbar{border-radius:0}
+aside{border-radius:0 16px 16px 0}
+.save-ind{border-radius:8px}
+.warn-box{border-radius:12px!important}
+.alert-banner{border-radius:0}
+.cp-dot{border-radius:50%!important}
+
+@media(max-width:768px){
+  aside{border-radius:0 20px 20px 0!important}
+  .detail-panel{border-radius:20px 20px 0 0!important}
+  .mobile-bar{border-radius:0}
+}
+
+@media(max-width:768px){
+  .mobile-bar{position:fixed!important;bottom:0;left:0;right:0;z-index:100;
+    padding-bottom:max(12px,env(safe-area-inset-bottom))!important}
+  .content-area{padding-bottom:0}
+  .gantt-scroll{padding-bottom:90px!important}
+  .gantt-root{padding-bottom:20px!important}
+}
+
+.proj-del-btn{
+  background:none;border:none;color:var(--muted);cursor:pointer;
+  font-size:16px;line-height:1;padding:0 2px;border-radius:4px;
+  opacity:0;transition:all .15s;flex-shrink:0;
+}
+.proj-item:hover .proj-del-btn{opacity:1}
+.proj-del-btn:hover{color:var(--red)!important;opacity:1!important}
+
+.ph-add-btn{
+  background:none;border:1.5px solid var(--accent);color:var(--accent);
+  cursor:pointer;font-size:16px;line-height:1;
+  width:26px;height:26px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  margin-right:8px;flex-shrink:0;
+  transition:all .18s cubic-bezier(.34,1.56,.64,1);
+  opacity:0.85;
+}
+.ph-add-btn:hover{
+  background:var(--accent);color:#fff;border-color:var(--accent);
+  opacity:1;transform:scale(1.1);
+}
+
+/* ── Priority ── */
+.pri-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-right:2px}
+.pri-high{background:#e11d48}
+.pri-medium{background:#d97706}
+.pri-low{background:#0d9e62}
+
+/* ── Milestone ── */
+.milestone-flag{font-size:10px;margin-left:2px}
+.bar.is-milestone{opacity:.9}
+
+/* ── Search ── */
+.search-wrap{position:relative;display:flex;align-items:center}
+.search-input{background:var(--bg);border:1px solid var(--border);color:var(--text);
+  padding:5px 28px 5px 28px;border-radius:10px;font-size:12px;font-family:inherit;
+  width:140px;transition:all .25s}
+.search-input:focus{outline:none;border-color:var(--accent);width:180px}
+.search-icon{position:absolute;left:8px;color:var(--muted);font-size:13px;pointer-events:none}
+.search-clear-btn{position:absolute;right:6px;background:none;border:none;color:var(--muted);
+  cursor:pointer;font-size:14px;line-height:1;display:none;padding:0}
+.search-clear-btn.show{display:block}
+
+/* ── Dashboard ── */
+.dash-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:400;display:none}
+.dash-overlay.show{display:block}
+.dash-panel{position:fixed;right:0;top:0;bottom:0;width:380px;max-width:95vw;
+  background:var(--surface);border-left:1px solid var(--border);z-index:401;
+  display:flex;flex-direction:column;transform:translateX(100%);
+  transition:transform .3s cubic-bezier(.25,.46,.45,.94);
+  box-shadow:-4px 0 24px rgba(0,0,0,.15)}
+.dash-panel.show{transform:translateX(0)}
+.dash-hdr{padding:16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.dash-hdr-title{font-size:15px;font-weight:700;color:var(--text);flex:1}
+.dash-close{background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer}
+.dash-body{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:16px}
+.dash-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:14px}
+.dash-card-title{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.dash-stat-row{display:flex;gap:12px}
+.dash-stat{flex:1;text-align:center}
+.dash-stat-num{font-size:28px;font-weight:700;color:var(--accent);line-height:1}
+.dash-stat-lbl{font-size:11px;color:var(--muted);margin-top:2px}
+.dash-proj-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.dash-proj-name{font-size:12px;color:var(--text);width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex-shrink:0}
+.dash-prog-track{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.dash-prog-fill{height:100%;border-radius:3px;transition:width .4s}
+.dash-prog-pct{font-size:11px;color:var(--muted);min-width:28px;text-align:right}
+.dash-deadline-item{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--border)}
+.dash-deadline-item:last-child{border-bottom:none}
+.dash-dl-name{font-size:12px;color:var(--text);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dash-dl-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;white-space:nowrap}
+.dl-red{background:rgba(225,29,72,.12);color:#e11d48}
+.dl-amber{background:rgba(217,119,6,.12);color:#d97706}
+.dl-green{background:rgba(13,158,98,.12);color:#0d9e62}
+.status-bar-wrap{display:flex;height:8px;border-radius:4px;overflow:hidden;gap:1px;margin-top:8px}
+.status-seg{height:100%;transition:width .3s;border-radius:2px}
+.status-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.status-legend-item{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--muted)}
+.status-legend-dot{width:8px;height:8px;border-radius:50%}
+
+/* ── Undo toast ── */
+.undo-toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);
+  background:var(--surface);border:1px solid var(--border);color:var(--text);
+  padding:10px 16px;border-radius:12px;font-size:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,.2);z-index:1000;
+  transition:opacity .3s ease, transform .3s cubic-bezier(.34,1.56,.64,1);
+  display:flex;align-items:center;gap:10px;white-space:nowrap;
+  opacity:0;pointer-events:none;transform:translateX(-50%) translateY(12px)}
+.undo-toast.show{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.undo-btn-toast{background:var(--accent);border:none;color:#fff;padding:4px 10px;
+  border-radius:6px;font-size:11px;cursor:pointer;font-family:inherit;font-weight:600}
+
+/* ── Notif btn ── */
+.notif-btn{padding:5px 9px;font-size:16px;border:1px solid var(--border);background:none;
+  cursor:pointer;border-radius:10px;color:var(--muted);position:relative;transition:all .2s}
+.notif-btn:hover{border-color:var(--accent);color:var(--accent)}
+.notif-badge{position:absolute;top:-3px;right:-3px;background:var(--red);color:#fff;
+  font-size:8px;font-weight:700;border-radius:50%;width:14px;height:14px;
+  display:none;align-items:center;justify-content:center}
+.notif-badge.show{display:flex}
+
+/* ── Print ── */
+@media print{
+  aside,.topbar,.mobile-bar,.detail-panel,.alert-banner,
+  .dash-panel,.dash-overlay,.undo-toast{display:none!important}
+  .gantt-scroll{overflow:visible!important;height:auto!important}
+  .gantt-root{width:auto!important}
+  #app{height:auto!important;overflow:visible!important}
+  main{overflow:visible!important}
+  .content-area{overflow:visible!important;height:auto!important}
+  body{background:white!important}
+  .bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<div id="login-screen" style="background:#f5f2eb!important">
+  <div class="login-logo" style="color:#2d7a55!important"><span style="color:#0d9e62!important">Research</span><span style="color:#5a7a6a!important">Flow</span></div>
+  <div class="login-subtitle" style="color:#5a7060!important">研究進度管理系統</div>
+  <div class="login-card" style="background:#ffffff!important;border:1px solid #d4c9a8!important;box-shadow:0 8px 32px rgba(100,80,40,.12)!important">
+    <h2 style="color:#1a3328!important">歡迎使用</h2>
+    <p style="color:#4a7060!important">登入後可在所有裝置同步你的研究進度</p>
+    <button class="google-btn" onclick="signInWithGoogle()">
+      <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+      使用 Google 帳號登入
+    </button>
+    <div class="login-divider">或</div>
+    <button class="guest-btn" onclick="enterGuestMode()">以訪客身份使用</button>
+    <div class="login-note">訪客模式資料僅存於本機，不會同步</div>
+    <div class="login-error" id="login-error"></div>
+  </div>
+</div>
+
+<div id="app" style="display:none">
+<aside>
+  <div class="sidebar-header">
+    <div class="logo">Research<span>Flow</span></div>
+  </div>
+  <div class="sidebar-sec">專案</div>
+  <div class="project-list" id="project-list"></div>
+  <button class="add-btn" onclick="openAddProject()"><span>+</span><span>新增專案</span></button>
+  <div class="user-bar" id="user-bar">
+    <div class="user-avatar-placeholder" id="user-avatar">?</div>
+    <div class="user-name" id="user-name">未登入</div>
+    <div class="sync-dot" id="sync-dot"></div>
+    <button class="logout-btn" id="logout-btn" onclick="signOut()">登出</button>
+  </div>
+  <button class="theme-open-btn" onclick="toggleThemePanel()" id="theme-open-btn" title="背景顏色">
+    <span>🎨</span><span>背景顏色</span>
+  </button>
+</aside>
+<main>
+  <div class="alert-banner" id="alert-banner"><span>⚠</span><span id="alert-text"></span></div>
+  <div class="topbar">
+    <button class="mobile-menu-btn" style="display:none" onclick="toggleMobileDrawer()">☰</button>
+    <h1 id="topbar-title">所有專案</h1>
+    <span class="save-ind" id="save-ind">已儲存 ✓</span>
+    <div class="view-tabs">
+      <button class="view-tab" id="tab-week" onclick="setView('week')">週</button>
+      <button class="view-tab active" id="tab-month" onclick="setView('month')">月</button>
+      <button class="view-tab" id="tab-quarter" onclick="setView('quarter')">季</button>
+    </div>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input class="search-input" id="search-input" placeholder="搜尋任務..." oninput="onSearch(this.value)">
+      <button class="search-clear-btn" id="search-clear" onclick="clearSearch()">×</button>
+    </div>
+    <button class="ctrl-btn" onclick="scrollToToday()">今天</button>
+    <button class="ctrl-btn" id="btn-add-task" onclick="openAddTask()">+ 新增任務</button>
+    <button class="ctrl-btn" onclick="openDashboard()">📊 總覽</button>
+    <button class="notif-btn" id="notif-btn" onclick="toggleNotifications()" title="截止提醒">🔔<span class="notif-badge" id="notif-badge"></span></button>
+    <button class="ctrl-btn" onclick="printGantt()" title="列印/存PDF">🖨</button>
+    <button class="ctrl-btn" id="btn-export" onclick="exportData()">↓ 匯出</button>
+    <button class="ctrl-btn" id="btn-import" onclick="document.getElementById('imp-input').click()">↑ 匯入</button>
+    <input type="file" id="imp-input" accept=".json" style="display:none" onchange="importData(event)">
+  </div>
+  <div class="content-area">
+    <div class="gantt-scroll" id="gantt-scroll">
+      <div class="gantt-root" id="gantt-root"></div>
+    </div>
+    <div class="detail-panel hidden" id="detail-panel">
+      <div class="dp-hdr">
+        <div class="dp-title" id="dp-title">任務詳情</div>
+        <button class="dp-close" onclick="closeDetail()">×</button>
+      </div>
+      <div class="dp-body" id="dp-body"></div>
+    </div>
+  </div>
+  <div class="mobile-bar" id="mobile-bar">
+    <button class="mobile-bar-btn" onclick="openAddTask()">
+      <span class="mb-icon">＋</span>
+      <span>新增任務</span>
+    </button>
+    <button class="mobile-bar-btn" onclick="openAddProject()">
+      <span class="mb-icon">📁</span>
+      <span>新增專案</span>
+    </button>
+    <button class="mobile-bar-btn" onclick="scrollToToday()">
+      <span class="mb-icon">📅</span>
+      <span>今天</span>
+    </button>
+    <button class="mobile-bar-btn" onclick="toggleThemePanel()">
+      <span class="mb-icon">🎨</span>
+      <span>主題</span>
+    </button>
+  </div>
+</main>
+</div>
+
+<div class="dash-overlay" id="dash-overlay" onclick="closeDashboard()"></div>
+<div class="dash-panel" id="dash-panel">
+  <div class="dash-hdr">
+    <div class="dash-hdr-title">📊 總覽</div>
+    <button class="dash-close" onclick="closeDashboard()">×</button>
+  </div>
+  <div class="dash-body" id="dash-body"></div>
+</div>
+<div class="undo-toast" id="undo-toast">
+  <span id="undo-msg">已復原</span>
+  <button class="undo-btn-toast" onclick="undo()">Ctrl+Z 再復原</button>
+</div>
+<div class="modal-overlay" id="modal" style="display:none" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h2 id="modal-title">新增專案</h2>
+    <div class="mf"><div class="ml" id="modal-name-lbl">名稱</div><input class="mi" id="modal-name" placeholder=""></div>
+    <div id="modal-color-field" class="mf">
+      <div class="ml">顏色</div>
+      <div class="cp-row" id="color-picker"></div>
+    </div>
+    <div id="modal-task-fields" style="display:none">
+      <div class="mf"><div class="ml">所屬專案</div><select class="mi" id="modal-proj-sel"></select></div>
+      <div class="mf"><div class="ml">開始日</div><div id="modal-start-picker"></div></div>
+      <div class="mf"><div class="ml">截止日</div><div id="modal-end-picker"></div></div>
+    </div>
+    <div class="modal-actions">
+      <button class="m-cancel" onclick="closeModal()">取消</button>
+      <button class="m-confirm" onclick="confirmModal()">新增</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Date Picker Component ─────────────────────────────────────────────
+const WD = ['日','一','二','三','四','五','六'];
+const MZH = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+
+let activePicker = null; // currently open picker instance
+
+function createDatePicker(containerId, initialValue, onChange) {
+  const container = document.getElementById(containerId);
+  if(!container) return null;
+
+  let value = initialValue || todayStr(); // YYYY-MM-DD
+  let pickerEl = null;
+  let mode = 'days'; // 'days' | 'months' | 'years'
+  let viewYear, viewMonth;
+
+  function parseVal() {
+    const p = value.split('-');
+    return { y: parseInt(p[0]), m: parseInt(p[1])-1, d: parseInt(p[2]) };
+  }
+
+  function init() {
+    const {y,m} = parseVal();
+    viewYear = y; viewMonth = m;
+  }
+
+  function formatDisplay(s) {
+    if(!s) return '選擇日期';
+    const p = s.split('-');
+    return `${p[0]} / ${p[1]} / ${p[2]}`;
+  }
+
+  function render() {
+    container.innerHTML = '';
+    const wrap = document.createElement('div');
+    wrap.className = 'datepicker-wrap';
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'datepicker-btn' + (pickerEl ? ' open' : '');
+    btn.innerHTML = `<span>${formatDisplay(value)}</span><span class="cal-icon">📅</span>`;
+    btn.onclick = togglePicker;
+    wrap.appendChild(btn);
+    container.appendChild(wrap);
+  }
+
+  function togglePicker(e) {
+    e.stopPropagation();
+    if(pickerEl) { closePicker(); return; }
+    // close any other open picker
+    if(activePicker && activePicker !== self) activePicker.closePicker();
+    activePicker = self;
+    init();
+    openPicker(e.currentTarget);
+  }
+
+  function openPicker(anchor) {
+    pickerEl = document.createElement('div');
+    pickerEl.className = 'datepicker-pop';
+    pickerEl.onclick = e => e.stopPropagation();
+    document.body.appendChild(pickerEl);
+    positionPicker(anchor);
+    renderPicker();
+    render();
+  }
+
+  function positionPicker(anchor) {
+    const r = anchor.getBoundingClientRect();
+    let top = r.bottom + 6, left = r.left;
+    if(top + 300 > window.innerHeight) top = r.top - 300;
+    if(left + 250 > window.innerWidth) left = window.innerWidth - 255;
+    pickerEl.style.top = top + 'px';
+    pickerEl.style.left = left + 'px';
+  }
+
+  function closePicker() {
+    if(pickerEl) { pickerEl.remove(); pickerEl = null; }
+    if(activePicker === self) activePicker = null;
+    render();
+  }
+
+  function renderPicker() {
+    if(!pickerEl) return;
+    pickerEl.innerHTML = '';
+    if(mode === 'days') renderDays();
+    else if(mode === 'months') renderMonths();
+    else renderYears();
+  }
+
+  function renderDays() {
+    // nav
+    const nav = document.createElement('div'); nav.className = 'dp-nav';
+    const prev = document.createElement('button'); prev.className = 'dp-nav-btn'; prev.textContent = '‹';
+    prev.onclick = () => { viewMonth--; if(viewMonth<0){viewMonth=11;viewYear--;} renderPicker(); };
+    const title = document.createElement('div'); title.className = 'dp-month-title';
+    title.textContent = viewYear + '年 ' + MZH[viewMonth];
+    title.onclick = () => { mode = 'months'; renderPicker(); };
+    const next = document.createElement('button'); next.className = 'dp-nav-btn'; next.textContent = '›';
+    next.onclick = () => { viewMonth++; if(viewMonth>11){viewMonth=0;viewYear++;} renderPicker(); };
+    nav.appendChild(prev); nav.appendChild(title); nav.appendChild(next);
+    pickerEl.appendChild(nav);
+
+    // weekdays
+    const wds = document.createElement('div'); wds.className = 'dp-weekdays';
+    WD.forEach(w => { const el=document.createElement('div');el.className='dp-wd';el.textContent=w;wds.appendChild(el); });
+    pickerEl.appendChild(wds);
+
+    // days grid
+    const grid = document.createElement('div'); grid.className = 'dp-days';
+    const firstDay = new Date(viewYear, viewMonth, 1).getDay();
+    const daysInMonth = new Date(viewYear, viewMonth+1, 0).getDate();
+    const todayD = todayStr();
+    const {y:selY,m:selM,d:selD} = parseVal();
+
+    for(let i=0; i<firstDay; i++) {
+      const el=document.createElement('div');el.className='dp-day empty';grid.appendChild(el);
+    }
+    for(let d=1; d<=daysInMonth; d++) {
+      const el = document.createElement('div');
+      const ds = `${viewYear}-${String(viewMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+      const dow = new Date(viewYear, viewMonth, d).getDay();
+      let cls = 'dp-day in-month';
+      if(dow===0||dow===6) cls += ' weekend';
+      if(ds===todayD) cls += ' today';
+      if(viewYear===selY && viewMonth===selM && d===selD) cls += ' selected';
+      el.className = cls;
+      el.textContent = d;
+      el.onclick = () => { value = ds; onChange(ds); closePicker(); };
+      grid.appendChild(el);
+    }
+    pickerEl.appendChild(grid);
+  }
+
+  function renderMonths() {
+    const nav = document.createElement('div'); nav.className = 'dp-nav';
+    const prev = document.createElement('button'); prev.className = 'dp-nav-btn'; prev.textContent = '‹';
+    prev.onclick = () => { viewYear--; renderPicker(); };
+    const title = document.createElement('div'); title.className = 'dp-month-title';
+    title.textContent = viewYear + '年';
+    title.onclick = () => { mode = 'years'; renderPicker(); };
+    const next = document.createElement('button'); next.className = 'dp-nav-btn'; next.textContent = '›';
+    next.onclick = () => { viewYear++; renderPicker(); };
+    nav.appendChild(prev); nav.appendChild(title); nav.appendChild(next);
+    pickerEl.appendChild(nav);
+
+    const grid = document.createElement('div'); grid.className = 'dp-ym-grid';
+    const {m:selM, y:selY} = parseVal();
+    MZH.forEach((mn, i) => {
+      const el = document.createElement('div');
+      el.className = 'dp-ym-item' + (viewYear===selY && i===selM ? ' selected' : '');
+      el.textContent = mn;
+      el.onclick = () => { viewMonth = i; mode = 'days'; renderPicker(); };
+      grid.appendChild(el);
+    });
+    pickerEl.appendChild(grid);
+  }
+
+  function renderYears() {
+    const base = Math.floor(viewYear/12)*12;
+    const nav = document.createElement('div'); nav.className = 'dp-nav';
+    const prev = document.createElement('button'); prev.className = 'dp-nav-btn'; prev.textContent = '‹';
+    prev.onclick = () => { viewYear -= 12; renderPicker(); };
+    const title = document.createElement('div'); title.className = 'dp-month-title';
+    title.textContent = base + ' – ' + (base+11);
+    const next = document.createElement('button'); next.className = 'dp-nav-btn'; next.textContent = '›';
+    next.onclick = () => { viewYear += 12; renderPicker(); };
+    nav.appendChild(prev); nav.appendChild(title); nav.appendChild(next);
+    pickerEl.appendChild(nav);
+
+    const grid = document.createElement('div'); grid.className = 'dp-ym-grid';
+    const {y:selY} = parseVal();
+    for(let y=base; y<base+12; y++) {
+      const el = document.createElement('div');
+      el.className = 'dp-ym-item' + (y===selY ? ' selected' : '');
+      el.textContent = y;
+      el.onclick = () => { viewYear = y; mode = 'months'; renderPicker(); };
+      grid.appendChild(el);
+    }
+    pickerEl.appendChild(grid);
+  }
+
+  function getValue() { return value; }
+  function setValue(v) { value = v; init(); render(); }
+
+  const self = { closePicker, getValue, setValue };
+  init(); render();
+  return self;
+}
+
+// close picker when clicking outside
+document.addEventListener('click', () => { if(activePicker) activePicker.closePicker(); });
+
+// ── App State ─────────────────────────────────────────────────────────
+const COLORS = ['#7c6ff7','#f472b6','#34d399','#fb923c','#60a5fa','#a78bfa','#f87171','#4ade80','#fbbf24','#2dd4bf'];
+const DAY_W = 28;
+let view = 'month';
+let selectedTaskId = null, activeProjectId = null;
+let modalMode = null, selColor = COLORS[0];
+let viewDays = [];
+let dpStart = null, dpEnd = null; // detail panel pickers
+let modalDpStart = null, modalDpEnd = null;
+
+let {projects, tasks} = loadData();
+let collapsedProjects = new Set();
+// 暴露給 Firebase module 用
+window.projects = projects;
+window.tasks = tasks;
+
+function defaultData() {
+  return {
+    projects:[
+      {id:'p1',name:'論文研究',color:'#7c6ff7'},
+      {id:'p2',name:'期刊投稿',color:'#34d399'},
+      {id:'p3',name:'實驗數據',color:'#fb923c'}
+    ],
+    tasks:[
+      {id:'t1',projectId:'p1',name:'文獻回顧',start:'2026-05-01',end:'2026-06-15',status:'in_progress',progress:65,notes:'已讀完30篇，需補充近期論文'},
+      {id:'t2',projectId:'p1',name:'研究方法設計',start:'2026-06-10',end:'2026-07-20',status:'not_started',progress:0,notes:''},
+      {id:'t3',projectId:'p1',name:'論文撰寫',start:'2026-07-15',end:'2026-09-30',status:'not_started',progress:0,notes:''},
+      {id:'t4',projectId:'p2',name:'摘要撰寫',start:'2026-05-15',end:'2026-06-05',status:'done',progress:100,notes:'已完成，等待導師審閱'},
+      {id:'t5',projectId:'p2',name:'Full Paper 提交',start:'2026-06-20',end:'2026-07-10',status:'not_started',progress:0,notes:''},
+      {id:'t6',projectId:'p3',name:'數據蒐集',start:'2026-05-01',end:'2026-06-30',status:'in_progress',progress:40,notes:'需再跑3組實驗'},
+      {id:'t7',projectId:'p3',name:'統計分析',start:'2026-07-01',end:'2026-08-15',status:'not_started',progress:0,notes:''}
+    ]
+  };
+}
+
+function loadData() {
+  try { const d = localStorage.getItem('rf_v3'); if(d) return JSON.parse(d); } catch(e){}
+  // migrate from older versions
+  try { const d = localStorage.getItem('rf_v2'); if(d) return JSON.parse(d); } catch(e){}
+  return defaultData();
+}
+function saveData() {
+  window.projects = projects;
+  window.tasks = tasks;
+  if(window._isGuest) {
+    // 訪客模式存到獨立 key，不影響 Google 帳號資料
+    try { localStorage.setItem('rf_guest', JSON.stringify({projects,tasks})); showSaved(); } catch(e){}
+  } else {
+    try { localStorage.setItem('rf_v3', JSON.stringify({projects,tasks})); showSaved(); } catch(e){}
+    if(window.cloudSave) window.cloudSave({projects, tasks});
+  }
+}
+function showSaved() {
+  const el = document.getElementById('save-ind'); el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2000);
+}
+function exportData() {
+  const b = new Blob([JSON.stringify({projects,tasks},null,2)],{type:'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(b);
+  a.download = 'researchflow-' + todayStr() + '.json'; a.click(); URL.revokeObjectURL(a.href);
+}
+function importData(e) {
+  const f = e.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = ev => {
+    try {
+      const d = JSON.parse(ev.target.result);
+      if(d.projects && d.tasks) { projects=d.projects; tasks=d.tasks; saveData(); closeDetail(); render(); }
+    } catch(err) { alert('匯入失敗：格式不正確'); }
+  };
+  r.readAsText(f); e.target.value = '';
+}
+
+// ── Date helpers ──────────────────────────────────────────────────────
+function todayStr() { return new Date().toISOString().slice(0,10); }
+function parseD(s) { return new Date(s + 'T00:00:00'); }
+function addDays(s, n) { const d = parseD(s); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
+
+function buildViewDays() {
+  const now = new Date(); now.setHours(0,0,0,0);
+  let start, end;
+  if(view==='week'){ start=new Date(now);start.setDate(start.getDate()-14);end=new Date(now);end.setDate(end.getDate()+42); }
+  else if(view==='month'){ start=new Date(now.getFullYear(),now.getMonth()-1,1);end=new Date(now.getFullYear(),now.getMonth()+4,0); }
+  else { start=new Date(now.getFullYear(),now.getMonth()-1,1);end=new Date(now.getFullYear(),now.getMonth()+8,0); }
+  viewDays=[];
+  const cur=new Date(start);
+  while(cur<=end){viewDays.push(new Date(cur));cur.setDate(cur.getDate()+1);}
+}
+
+function dateIdx(s) {
+  const t = parseD(s).getTime();
+  for(let i=0;i<viewDays.length;i++) if(viewDays[i].getTime()===t) return i;
+  return -1;
+}
+
+const STATUS_LABEL = {not_started:'未開始',in_progress:'進行中',done:'已完成',delayed:'已延遲'};
+const STATUS_OPT = ['not_started','in_progress','done','delayed'];
+
+// ── Render ────────────────────────────────────────────────────────────
+function setView(v) {
+  view=v;
+  document.querySelectorAll('.view-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+v).classList.add('active');
+  render();
+}
+
+function render() { renderSidebar(); renderGantt(); checkAlerts(); }
+window.render = render;
+
+function renderSidebar() {
+  const pl = document.getElementById('project-list'); pl.innerHTML='';
+  const all = document.createElement('div');
+  all.className='proj-item'+(activeProjectId===null?' active':'');
+  all.innerHTML=`<div class="proj-dot" style="background:#8b8a9e"></div><span>所有專案</span>`;
+  all.onclick=()=>{activeProjectId=null;render();if(window.innerWidth<=768)closeMobileDrawer();};
+  pl.appendChild(all);
+  projects.forEach(p=>{
+    const c=tasks.filter(t=>t.projectId===p.id).length;
+    const item=document.createElement('div');
+    item.className='proj-item'+(activeProjectId===p.id?' active':'');
+    item.innerHTML=`<div class="proj-dot" style="background:${p.color}"></div><span style="flex:1">${p.name}</span><span style="font-size:10px;color:var(--muted);margin-right:4px">${c}</span><button class="proj-del-btn" title="刪除專案">×</button>`;
+    item.querySelector('.proj-del-btn').onclick=(e)=>{
+      e.stopPropagation();
+      const taskCount = tasks.filter(t=>t.projectId===p.id).length;
+      const msg = taskCount>0 ? ('確定刪除「'+p.name+'」?\n此專案下的 '+taskCount+' 個任務也會一併刪除。') : ('確定刪除「'+p.name+'」?')
+      if(!confirm(msg)) return;
+      tasks = tasks.filter(t=>t.projectId!==p.id);
+      projects = projects.filter(pr=>pr.id!==p.id);
+      if(activeProjectId===p.id) activeProjectId=null;
+      saveData(); render();
+    };
+    item.onclick=()=>{activeProjectId=p.id;render();if(window.innerWidth<=768)closeMobileDrawer();};
+    pl.appendChild(item);
+  });
+  document.getElementById('topbar-title').textContent =
+    activeProjectId ? (projects.find(p=>p.id===activeProjectId)?.name||'') : '所有專案';
+}
+
+function renderGantt() {
+  buildViewDays();
+  const root = document.getElementById('gantt-root'); root.innerHTML='';
+  const todayI = dateIdx(todayStr());
+  const totalW = 220 + viewDays.length * DAY_W;
+
+  // header
+  const ghWrap = document.createElement('div');
+  ghWrap.className='gh-wrap'; ghWrap.style.width=totalW+'px';
+
+  const mRow=document.createElement('div');mRow.className='gh-month-row';
+  const mLabel=document.createElement('div');mLabel.className='gh-label-month';mLabel.textContent='任務';mRow.appendChild(mLabel);
+  const mCells=document.createElement('div');mCells.className='gh-months';
+  let curM=-1,curCell=null,curCount=0;
+  viewDays.forEach((d,i)=>{
+    const m=d.getMonth(),yr=d.getFullYear();
+    if(m!==curM){
+      if(curCell)curCell.style.width=(curCount*DAY_W)+'px';
+      curCell=document.createElement('div');curCell.className='gh-month-cell';
+      curCell.textContent=yr+'年'+MZH[m];
+      mCells.appendChild(curCell);curM=m;curCount=0;
+    }
+    curCount++;
+  });
+  if(curCell)curCell.style.width=(curCount*DAY_W)+'px';
+  mRow.appendChild(mCells);ghWrap.appendChild(mRow);
+
+  const dRow=document.createElement('div');dRow.className='gh-day-row';
+  const dLabel=document.createElement('div');dLabel.className='gh-day-label';dRow.appendChild(dLabel);
+  const dCells=document.createElement('div');dCells.className='gh-days';
+  viewDays.forEach((d,i)=>{
+    const dc=document.createElement('div');
+    dc.className='gh-day'+(d.getDay()===0||d.getDay()===6?' weekend':'')+(i===todayI?' today-col':'');
+    dc.style.width=DAY_W+'px';dc.textContent=d.getDate();
+    dCells.appendChild(dc);
+  });
+  dRow.appendChild(dCells);ghWrap.appendChild(dRow);
+  root.appendChild(ghWrap);
+
+  const body=document.createElement('div');body.className='gantt-body';body.style.width=totalW+'px';
+  const visProj=activeProjectId?projects.filter(p=>p.id===activeProjectId):projects;
+  if(!visProj.length){
+    const er=document.createElement('div');er.className='empty-row';er.style.height='120px';
+    er.textContent='點擊「+ 新增任務」開始';body.appendChild(er);
+  }
+  visProj.forEach(p=>{
+    const pTasks=tasks.filter(t=>t.projectId===p.id);
+    const isCollapsed = collapsedProjects.has(p.id);
+    const ph=document.createElement('div');ph.className='proj-hdr';
+    ph.style.width=totalW+'px';
+    ph.innerHTML='<div class="ph-dot" style="background:'+p.color+'"></div><button class="ph-add-btn" title="新增任務">＋</button><div class="ph-name">'+p.name+'</div><div style="flex:1"></div><div class="ph-count">'+pTasks.length+' 項</div><span class="ph-arrow'+(isCollapsed?' collapsed':'')+'" style="margin-left:6px">▾</span>';
+    ph.querySelector('.ph-add-btn').onclick=(e)=>{
+      e.stopPropagation();
+      activeProjectId=p.id;
+      openAddTask(p.id);
+    };
+    ph.onclick=()=>{
+      const wasCollapsed = collapsedProjects.has(p.id);
+      if(wasCollapsed) collapsedProjects.delete(p.id);
+      else collapsedProjects.add(p.id);
+      // 動畫切換
+      const arrow = ph.querySelector('.ph-arrow');
+      if(arrow) arrow.classList.toggle('collapsed', !wasCollapsed);
+      if(grpWrap){
+        if(wasCollapsed){
+          grpWrap.style.maxHeight = (pTasks.length * 43 + 60) + 'px';
+          grpWrap.style.opacity = '1';
+        } else {
+          grpWrap.style.maxHeight = '0';
+          grpWrap.style.opacity = '0';
+        }
+      }
+    };
+    body.appendChild(ph);
+    // 建立可動畫的 wrapper
+    const grpWrap = document.createElement('div');
+    grpWrap.className = 'task-group-wrap';
+    // 先不設 max-height，讓內容撐開後再鎖定
+    if(!pTasks.length){
+      const er=document.createElement('div');er.className='empty-row';er.style.width=totalW+'px';er.textContent='尚無任務';grpWrap.appendChild(er);
+    }
+    const filteredTasks = searchQuery ? pTasks.filter(tk => tk.name.toLowerCase().includes(searchQuery)) : pTasks;
+    filteredTasks.forEach(tk=>{
+      const row=document.createElement('div');
+      row.className='task-row'+(selectedTaskId===tk.id?' selected':'');
+      row.onclick=()=>openDetail(tk.id);
+      const lbl=document.createElement('div');lbl.className='task-label';
+      const dLeft=Math.round((parseD(tk.end)-new Date())/86400000);
+      const warn=dLeft>=0&&dLeft<=7&&tk.status!=='done';
+      lbl.innerHTML=`<div class="task-name">${tk.name}</div><div class="task-meta"><span class="sbadge s-${tk.status}">${STATUS_LABEL[tk.status]||tk.status}</span><span class="pmini">${tk.progress}%</span>${warn?`<span style="color:var(--amber);font-size:9px">⚠${dLeft}天</span>`:''}</div>`;
+      row.appendChild(lbl);
+      const tl=document.createElement('div');tl.className='task-tl';
+      viewDays.forEach((d,i)=>{
+        const dc=document.createElement('div');
+        dc.className='day-cell'+(d.getDay()===0||d.getDay()===6?' weekend':'')+(i===todayI?' today-col':'');
+        dc.style.width=DAY_W+'px';tl.appendChild(dc);
+      });
+      const si=dateIdx(tk.start),ei=dateIdx(tk.end);
+      const bS=Math.max(si,0),bE=ei<0?0:Math.min(ei,viewDays.length-1);
+      if(si<viewDays.length&&ei>=0){
+        const bW=Math.max((bE-bS+1)*DAY_W-2,4);
+        const bar=document.createElement('div');bar.className='bar';
+        bar.style.cssText=`left:${bS*DAY_W+1}px;width:${bW}px;background:${p.color}`;
+        const prog=document.createElement('div');prog.className='bar-prog';prog.style.width=tk.progress+'%';bar.appendChild(prog);
+        const lh=document.createElement('div');lh.className='bar-lh';bar.appendChild(lh);
+        const rh=document.createElement('div');rh.className='bar-rh';bar.appendChild(rh);
+        const lb=document.createElement('div');lb.className='bar-lbl';lb.textContent=tk.name;bar.appendChild(lb);
+        setupDrag(bar,lh,rh,tk);tl.appendChild(bar);
+      }
+      if(todayI>=0&&todayI<viewDays.length){
+        const vl=document.createElement('div');vl.className='today-vline';
+        vl.style.left=(todayI*DAY_W+DAY_W/2)+'px';tl.appendChild(vl);
+      }
+      row.appendChild(tl); grpWrap.appendChild(row);
+    });
+    body.appendChild(grpWrap);
+    // 設定 max-height 以便動畫
+    const naturalH = grpWrap.scrollHeight || pTasks.length * 43 + 2;
+    grpWrap.style.maxHeight = naturalH + 'px';
+    grpWrap.style.opacity = '1';
+    if(isCollapsed){
+      grpWrap.style.maxHeight = '0';
+      grpWrap.style.opacity = '0';
+    }
+  });
+  root.appendChild(body);
+}
+
+// ── Drag ──────────────────────────────────────────────────────────────
+function setupDrag(bar,lh,rh,tk){
+  let mode=null,startX=0,origS='',origE='';
+  function onMove(e){
+    const dd=Math.round((e.clientX-startX)/DAY_W);
+    if(mode==='bar'){tk.start=addDays(origS,dd);tk.end=addDays(origE,dd);}
+    else if(mode==='left'){const ns=addDays(origS,dd);if(ns<tk.end)tk.start=ns;}
+    else if(mode==='right'){const ne=addDays(origE,dd);if(ne>tk.start)tk.end=ne;}
+    renderGantt();
+    if(selectedTaskId===tk.id){
+      if(dpStart)dpStart.setValue(tk.start);
+      if(dpEnd)dpEnd.setValue(tk.end);
+    }
+  }
+  function onUp(){mode=null;document.removeEventListener('mousemove',onMove);document.removeEventListener('mouseup',onUp);saveData();checkAlerts();updateNotifBtn();}
+  bar.addEventListener('mousedown',e=>{if(e.target===lh||e.target===rh)return;e.preventDefault();e.stopPropagation();mode='bar';startX=e.clientX;origS=tk.start;origE=tk.end;document.addEventListener('mousemove',onMove);document.addEventListener('mouseup',onUp);});
+  lh.addEventListener('mousedown',e=>{e.preventDefault();e.stopPropagation();mode='left';startX=e.clientX;origS=tk.start;origE=tk.end;document.addEventListener('mousemove',onMove);document.addEventListener('mouseup',onUp);});
+  rh.addEventListener('mousedown',e=>{e.preventDefault();e.stopPropagation();mode='right';startX=e.clientX;origS=tk.start;origE=tk.end;document.addEventListener('mousemove',onMove);document.addEventListener('mouseup',onUp);});
+}
+
+// ── Detail Panel ──────────────────────────────────────────────────────
+function openDetail(id){
+  selectedTaskId=id;
+  const tk=tasks.find(t=>t.id===id);if(!tk)return;
+  document.getElementById('detail-panel').classList.remove('hidden');
+  document.getElementById('dp-title').textContent=tk.name;
+  const dLeft=Math.round((parseD(tk.end)-new Date())/86400000);
+  const warn=dLeft>=0&&dLeft<=7&&tk.status!=='done';
+  document.getElementById('dp-body').innerHTML=`
+    ${warn?`<div class="warn-box">⚠ 截止日即將到來！還有 ${dLeft} 天</div>`:''}
+    <div class="dp-field"><div class="dp-lbl">任務名稱</div><input class="dp-in" id="dp-name" value="${tk.name}"></div>
+    <div class="dp-field"><div class="dp-lbl">開始日期</div><div id="dp-start-picker"></div></div>
+    <div class="dp-field"><div class="dp-lbl">截止日期</div><div id="dp-end-picker"></div></div>
+    <div class="dp-field"><div class="dp-lbl">狀態</div>
+      <select class="dp-sel" id="dp-status">
+        ${STATUS_OPT.map(s=>`<option value="${s}"${tk.status===s?' selected':''}>${STATUS_LABEL[s]}</option>`).join('')}
+      </select>
+    </div>
+    <div class="dp-field">
+      <div class="dp-lbl">進度：<span id="dp-pv">${tk.progress}%</span></div>
+      <div class="prog-track"><div class="prog-fill" id="dp-pf" style="width:${tk.progress}%"></div></div>
+      <div class="prog-row">
+        <input type="range" class="dp-range" min="0" max="100" step="1" value="${tk.progress}" id="dp-prog"
+          oninput="document.getElementById('dp-pv').textContent=this.value+'%';document.getElementById('dp-pf').style.width=this.value+'%'">
+        <span style="font-size:11px;color:var(--text);min-width:32px;text-align:right" id="dp-pv2">${tk.progress}%</span>
+      </div>
+    </div>
+    <div class="dp-field"><div class="dp-lbl">備註</div><textarea class="dp-ta" id="dp-notes">${tk.notes||''}</textarea></div>\n    <div class="dp-field"><div class="dp-lbl">🔗 連結</div><input class="dp-in" id="dp-url" placeholder="https://..." value="${tk.url||''}"></div>\n    <button class="dp-save" onclick="saveDetail('${id}')">儲存</button>\n    <div style="display:flex;gap:8px">\n      <button class="dp-del" style="flex:1" onclick="copyTask('${id}')">📋 複製</button>\n      <button class="dp-del" style="flex:1;color:var(--red)" onclick="deleteTask('${id}')">🗑 刪除</button>\n    </div>\n  `;
+  // init pickers after DOM is ready
+  dpStart = createDatePicker('dp-start-picker', tk.start, v => {
+    tk.start = v; renderGantt(); checkAlerts();
+  });
+  dpEnd = createDatePicker('dp-end-picker', tk.end, v => {
+    tk.end = v; renderGantt(); checkAlerts();
+  });
+  const prog=document.getElementById('dp-prog');
+  if(prog) prog.oninput=function(){
+    document.getElementById('dp-pv').textContent=this.value+'%';
+    document.getElementById('dp-pf').style.width=this.value+'%';
+    document.getElementById('dp-pv2').textContent=this.value+'%';
+  };
+  renderGantt();
+}
+
+function saveDetail(id){
+  const tk=tasks.find(t=>t.id===id);if(!tk)return;
+  tk.name=document.getElementById('dp-name').value||tk.name;
+  if(dpStart)tk.start=dpStart.getValue();
+  if(dpEnd)tk.end=dpEnd.getValue();
+  tk.status=document.getElementById('dp-status').value;
+  tk.priority=document.getElementById('dp-priority').value;
+  tk.milestone=document.getElementById('dp-milestone').checked;
+  tk.progress=parseInt(document.getElementById('dp-prog').value);
+  tk.url=document.getElementById('dp-url').value;
+  tk.notes=document.getElementById('dp-notes').value;
+  saveData();checkAlerts();openDetail(id);
+}
+
+function deleteTask(id){
+  if(!confirm('確定要刪除此任務？'))return;
+  saveToUndo();
+  tasks=tasks.filter(t=>t.id!==id);window.tasks=tasks;selectedTaskId=null;dpStart=null;dpEnd=null;
+  document.getElementById('detail-panel').classList.add('hidden');
+  saveData();render();
+  showUndoToast('已刪除任務');
+}
+function closeDetail(){
+  selectedTaskId=null;dpStart=null;dpEnd=null;
+  document.getElementById('detail-panel').classList.add('hidden');
+  renderGantt();
+}
+
+// ── Alerts ────────────────────────────────────────────────────────────
+function checkAlerts(){
+  const now=new Date();now.setHours(0,0,0,0);
+  const w=tasks.filter(tk=>{const d=Math.round((parseD(tk.end)-now)/86400000);return d>=0&&d<=7&&tk.status!=='done';});
+  const banner=document.getElementById('alert-banner');
+  if(w.length){banner.classList.add('show');document.getElementById('alert-text').textContent='即將截止（7天內）：'+w.map(tk=>tk.name).join('、');}
+  else banner.classList.remove('show');
+}
+
+// ── Scroll to today ───────────────────────────────────────────────────
+function scrollToToday(){
+  buildViewDays();const i=dateIdx(todayStr());if(i<0)return;
+  const scroll=document.getElementById('gantt-scroll');
+  scroll.scrollTo({left:Math.max(0,220+i*DAY_W-scroll.clientWidth/2+DAY_W/2),behavior:'smooth'});
+}
+
+// ── Modal ─────────────────────────────────────────────────────────────
+function openAddProject(){
+  modalMode='project';
+  document.getElementById('modal-title').textContent='新增專案';
+  document.getElementById('modal-name-lbl').textContent='名稱';
+  document.getElementById('modal-name').value='';document.getElementById('modal-name').placeholder='例：論文研究';
+  document.getElementById('modal-color-field').style.display='';
+  document.getElementById('modal-task-fields').style.display='none';
+  const cp=document.getElementById('color-picker');cp.innerHTML='';selColor=COLORS[0];
+  COLORS.forEach(c=>{
+    const dot=document.createElement('div');dot.className='cp-dot'+(c===selColor?' sel':'');dot.style.background=c;
+    dot.onclick=()=>{selColor=c;document.querySelectorAll('.cp-dot').forEach(d=>d.classList.toggle('sel',d===dot));};
+    cp.appendChild(dot);
+  });
+  document.getElementById('modal').style.display='flex';
+  setTimeout(()=>document.getElementById('modal-name').focus(),50);
+}
+
+function openAddTask(presetProjectId){
+  modalMode='task';
+  document.getElementById('modal-title').textContent='新增任務';
+  document.getElementById('modal-name-lbl').textContent='任務名稱';
+  document.getElementById('modal-name').value='';document.getElementById('modal-name').placeholder='例：文獻回顧';
+  document.getElementById('modal-color-field').style.display='none';
+  document.getElementById('modal-task-fields').style.display='';
+  const targetProjId = presetProjectId || activeProjectId;
+  const ps=document.getElementById('modal-proj-sel');
+  ps.innerHTML=projects.map(p=>`<option value="${p.id}"${p.id===targetProjId?' selected':''}>${p.name}</option>`).join('');
+  document.getElementById('modal').style.display='flex';
+  // init modal date pickers after DOM renders
+  const td=todayStr();
+  setTimeout(()=>{
+    modalDpStart=createDatePicker('modal-start-picker',td,()=>{});
+    modalDpEnd=createDatePicker('modal-end-picker',addDays(td,14),()=>{});
+    document.getElementById('modal-name').focus();
+  },30);
+}
+
+function closeModal(){
+  document.getElementById('modal').style.display='none';
+  modalDpStart=null;modalDpEnd=null;
+}
+
+function confirmModal(){
+  const name=document.getElementById('modal-name').value.trim();if(!name)return;
+  if(modalMode==='project'){
+    projects.push({id:'p'+Date.now(),name,color:selColor});
+  } else {
+    const pid=document.getElementById('modal-proj-sel').value;
+    const start=modalDpStart?modalDpStart.getValue():todayStr();
+    const end=modalDpEnd?modalDpEnd.getValue():addDays(todayStr(),14);
+    if(!pid||!start||!end)return;
+    tasks.push({id:'t'+Date.now(),projectId:pid,name,start,end,status:'not_started',progress:0,notes:''});
+  }
+  closeModal();saveData();render();
+}
+
+document.getElementById('modal-name').addEventListener('keydown',e=>{if(e.key==='Enter')confirmModal();});
+document.getElementById('modal').addEventListener('click',e=>{if(e.target===document.getElementById('modal'))closeModal();});
+
+// ── Background Theme ──────────────────────────────────────────────────
+const BG_PRESETS = [
+  // ── 深色系 ──
+  {
+    name:'深海藍', bg:'#0d1b2a', surface:'#1b2d42', surface2:'#243550',
+    border:'#2e4566', text:'#e8f4fd', muted:'#7aa8cc', accent:'#3b9eff', accent2:'#60b8ff'
+  },
+  {
+    name:'墨黑', bg:'#0a0a0f', surface:'#141420', surface2:'#1c1c2e',
+    border:'#2a2a42', text:'#e8e6f5', muted:'#8b8aaa', accent:'#7c6ff7', accent2:'#a78bfa'
+  },
+  {
+    name:'森林綠', bg:'#0a1a12', surface:'#122318', surface2:'#193022',
+    border:'#1f4030', text:'#e6f5ec', muted:'#78aa90', accent:'#2ecc87', accent2:'#4ade9a'
+  },
+  {
+    name:'深紫夜', bg:'#110d1f', surface:'#1c1535', surface2:'#251c48',
+    border:'#32245c', text:'#eee8ff', muted:'#9985cc', accent:'#9b59ff', accent2:'#b47dff'
+  },
+  {
+    name:'暖炭', bg:'#1a1410', surface:'#251e18', surface2:'#302620',
+    border:'#42322a', text:'#f5efe8', muted:'#aa9080', accent:'#e8845a', accent2:'#f5a07a'
+  },
+  {
+    name:'深玫瑰', bg:'#1a0d12', surface:'#28141c', surface2:'#341a25',
+    border:'#4a2232', text:'#fce8ee', muted:'#cc8899', accent:'#f06090', accent2:'#f87daa'
+  },
+  // ── 淺色系 ──
+  {
+    name:'薄荷', bg:'#ffffff', surface:'#f5f2eb', surface2:'#e8f5ee',
+    border:'#b8d4c0', text:'#1a2e1e', muted:'#4a7a60', accent:'#0d9e62', accent2:'#14b87a',
+    dot:'#e8f5ee', dotBorder:'#0d9e62'
+  },
+  {
+    name:'天空', bg:'#ffffff', surface:'#eef4fc', surface2:'#deeaf8',
+    border:'#b8cce8', text:'#1a2340', muted:'#5a6a88', accent:'#2563eb', accent2:'#3b82f6',
+    dot:'#deeaf8', dotBorder:'#2563eb'
+  },
+  {
+    name:'奶霜', bg:'#f5f2eb', surface:'#fdf8f0', surface2:'#f0e8d8',
+    border:'#d4c4a0', text:'#2c2010', muted:'#7a6a50', accent:'#c0762a', accent2:'#d4893e',
+    dot:'#f0e8d8', dotBorder:'#c0762a'
+  },
+  {
+    name:'薰衣草', bg:'#ffffff', surface:'#f5f0fc', surface2:'#e8dff8',
+    border:'#c8b8e8', text:'#1e1040', muted:'#6a5898', accent:'#6c3fd4', accent2:'#8057e8',
+    dot:'#e8dff8', dotBorder:'#6c3fd4'
+  },
+];
+
+let currentBg = '#0f0f13';
+
+function isLightColor(hex) {
+  const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
+  return (r*299+g*587+b*114)/1000 > 128;
+}
+
+function applyBg(bgColor, preset) {
+  const root = document.documentElement;
+  if(preset) {
+    root.style.setProperty('--bg', preset.bg);
+    root.style.setProperty('--surface', preset.surface);
+    root.style.setProperty('--surface2', preset.surface2);
+    root.style.setProperty('--border', preset.border);
+    root.style.setProperty('--text', preset.text||'#e8e6f0');
+    root.style.setProperty('--muted', preset.muted||'#8b8a9e');
+    root.style.setProperty('--accent', preset.accent||'#3b82f6');
+    root.style.setProperty('--accent2', preset.accent2||preset.accent||'#60a5fa');
+    // 根據亮暗自動調整 box-shadow 方向
+    const isLight = isLightColor(preset.bg);
+    root.style.setProperty('--shadow', isLight ? 'rgba(0,0,0,0.12)' : 'rgba(0,0,0,0.4)');
+    currentBg = preset.bg;
+    document.getElementById('custom-bg-input').value = preset.bg;
+  } else {
+    const hex = bgColor;
+    const r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+    const lum = (r*299+g*587+b*114)/1000;
+    const isDark = lum < 128;
+    const adj = (v,n) => Math.max(0,Math.min(255,v+n));
+    const d = isDark?1:-1;
+    const toHex = (rv,gv,bv) => '#'+[rv,gv,bv].map(x=>Math.max(0,Math.min(255,Math.round(x))).toString(16).padStart(2,'0')).join('');
+    root.style.setProperty('--bg', hex);
+    root.style.setProperty('--surface', toHex(adj(r,15*d),adj(g,15*d),adj(b,15*d)));
+    root.style.setProperty('--surface2', toHex(adj(r,25*d),adj(g,25*d),adj(b,25*d)));
+    root.style.setProperty('--border', toHex(adj(r,40*d),adj(g,40*d),adj(b,40*d)));
+    root.style.setProperty('--text', isDark?'#e8e6f0':'#1a1a2e');
+    root.style.setProperty('--muted', isDark?'#8b8a9e':'#6b6b8a');
+    root.style.setProperty('--accent','#7c6ff7');
+    root.style.setProperty('--accent2','#a78bfa');
+    currentBg = hex;
+  }
+  try { localStorage.setItem('rf_theme', JSON.stringify({bg:currentBg, presetBg:preset?preset.bg:null})); } catch(e){}
+  renderThemePresets();
+}
+
+function toggleMobileDrawer() {
+  const aside = document.querySelector('aside');
+  const isOpen = aside.classList.contains('mobile-open');
+  if(isOpen) { closeMobileDrawer(); return; }
+  aside.classList.add('mobile-open');
+  // 監聽點擊 aside 外部
+  setTimeout(() => {
+    document._drawerHandler = (e) => {
+      if(!aside.contains(e.target)) { closeMobileDrawer(); }
+    };
+    document.addEventListener('click', document._drawerHandler);
+  }, 50);
+}
+function closeMobileDrawer() {
+  document.querySelector('aside').classList.remove('mobile-open');
+  if(document._drawerHandler) {
+    document.removeEventListener('click', document._drawerHandler);
+    document._drawerHandler = null;
+  }
+}
+
+function toggleThemePanel() {
+  const popup = document.getElementById('theme-popup');
+  const overlay = document.getElementById('theme-popup-overlay');
+  const isOpen = popup.classList.contains('show');
+  if(isOpen) { popup.classList.remove('show'); overlay.classList.remove('show'); }
+  else { popup.classList.add('show'); overlay.classList.add('show'); renderThemePresets(); }
+}
+function closeThemePanel() {
+  document.getElementById('theme-popup').classList.remove('show');
+  document.getElementById('theme-popup-overlay').classList.remove('show');
+}
+
+function renderThemePresets() {
+  const darkWrap = document.getElementById('theme-presets-dark');
+  const lightWrap = document.getElementById('theme-presets-light');
+  if(!darkWrap||!lightWrap) return;
+  darkWrap.innerHTML=''; lightWrap.innerHTML='';
+
+  BG_PRESETS.slice(0,6).forEach(p => {
+    const dot = document.createElement('div');
+    const isActive = currentBg===p.bg;
+    dot.className='theme-dot'+(isActive?' active':'');
+    dot.style.cssText='background:'+p.bg+';border-color:'+(isActive?p.accent||'#fff':p.border)+';box-shadow:0 2px 6px rgba(0,0,0,.35);border-width:'+(isActive?'2px':'1.5px');
+    dot.title=p.name;
+    dot.innerHTML='<div style="height:50%;background:'+p.surface+';border-radius:4px 4px 0 0"></div>';
+    dot.onclick=()=>applyBg(p.bg, p);
+    darkWrap.appendChild(dot);
+  });
+
+  BG_PRESETS.slice(6).forEach(p => {
+    const dot = document.createElement('div');
+    const isActive = currentBg===p.bg;
+    dot.className='theme-dot'+(isActive?' active':'');
+    dot.style.cssText='background:'+p.bg+';border-color:'+(isActive?p.accent||p.border:p.border)+';box-shadow:0 2px 6px rgba(0,0,0,.15);border-width:'+(isActive?'2px':'1.5px');
+    dot.title=p.name;
+    dot.innerHTML='<div style="height:50%;background:'+(p.dot||p.surface2)+';border-radius:4px 4px 0 0;border-bottom:1.5px solid '+(p.dotBorder||p.border)+'"></div>';
+    dot.onclick=()=>applyBg(p.bg, p);
+    lightWrap.appendChild(dot);
+  });
+}
+
+function loadTheme() {
+  try {
+    const saved = localStorage.getItem('rf_theme');
+    if(!saved) return;
+    const t = JSON.parse(saved);
+    const preset = BG_PRESETS.find(p=>p.bg===t.presetBg);
+    if(preset) applyBg(preset.bg, preset);
+    else if(t.bg) { document.getElementById('custom-bg-input').value=t.bg; applyBg(t.bg, null); }
+  } catch(e){}
+}
+
+
+// ── Search ──────────────────────────────────────────────────────────
+let searchQuery = '';
+function onSearch(q) {
+  searchQuery = q.trim().toLowerCase();
+  document.getElementById('search-clear').classList.toggle('show', searchQuery.length > 0);
+  renderGantt();
+}
+function clearSearch() {
+  searchQuery = '';
+  document.getElementById('search-input').value = '';
+  document.getElementById('search-clear').classList.remove('show');
+  renderGantt();
+}
+
+// ── Copy Task ────────────────────────────────────────────────────────
+function copyTask(id) {
+  saveToUndo();
+  const tk = tasks.find(t => t.id === id);
+  if(!tk) return;
+  const newTask = Object.assign({}, tk, {
+    id: 't' + Date.now(),
+    name: tk.name + ' (複製)',
+    status: 'not_started',
+    progress: 0
+  });
+  tasks.push(newTask);
+  window.tasks = tasks;
+  saveData(); render();
+  openDetail(newTask.id);
+  showUndoToast('已複製任務');
+}
+
+// ── Undo Stack ───────────────────────────────────────────────────────
+let undoStack = [];
+let undoTimer = null;
+function saveToUndo() {
+  undoStack.push(JSON.stringify({projects, tasks}));
+  if(undoStack.length > 20) undoStack.shift();
+}
+function undo() {
+  if(!undoStack.length) return;
+  const prev = JSON.parse(undoStack.pop());
+  projects = prev.projects;
+  tasks = prev.tasks;
+  window.projects = projects;
+  window.tasks = tasks;
+  saveData(); closeDetail(); render();
+  showUndoToast('已復原');
+}
+function showUndoToast(msg) {
+  const toast = document.getElementById('undo-toast');
+  document.getElementById('undo-msg').textContent = msg || '已復原';
+  toast.classList.add('show');
+  clearTimeout(undoTimer);
+  undoTimer = setTimeout(() => toast.classList.remove('show'), 3000);
+}
+document.addEventListener('keydown', e => {
+  if((e.ctrlKey || e.metaKey) && e.key === 'z' && !e.shiftKey) {
+    e.preventDefault(); undo();
+  }
+});
+
+// ── Dashboard ────────────────────────────────────────────────────────
+function openDashboard() {
+  renderDashboardContent();
+  document.getElementById('dash-panel').classList.add('show');
+  document.getElementById('dash-overlay').classList.add('show');
+}
+function closeDashboard() {
+  document.getElementById('dash-panel').classList.remove('show');
+  document.getElementById('dash-overlay').classList.remove('show');
+}
+function renderDashboardContent() {
+  const body = document.getElementById('dash-body');
+  const now = new Date(); now.setHours(0,0,0,0);
+  const total = tasks.length;
+  const done = tasks.filter(t => t.status === 'done').length;
+  const inProg = tasks.filter(t => t.status === 'in_progress').length;
+  const notStart = tasks.filter(t => t.status === 'not_started').length;
+  const delayed = tasks.filter(t => t.status === 'delayed').length;
+  const overallPct = total > 0 ? Math.round(tasks.reduce((s,t) => s+t.progress, 0) / total) : 0;
+
+  // upcoming deadlines (next 30 days)
+  const upcoming = tasks
+    .filter(t => t.status !== 'done')
+    .map(t => ({...t, daysLeft: Math.round((parseD(t.end)-now)/86400000)}))
+    .filter(t => t.daysLeft >= 0 && t.daysLeft <= 30)
+    .sort((a,b) => a.daysLeft - b.daysLeft)
+    .slice(0, 8);
+
+  body.innerHTML = '';
+
+  // Overall stats card
+  const statsCard = document.createElement('div');
+  statsCard.className = 'dash-card';
+  statsCard.innerHTML = '<div class="dash-card-title">整體進度</div>' +
+    '<div class="dash-stat-row">' +
+    '<div class="dash-stat"><div class="dash-stat-num">' + overallPct + '%</div><div class="dash-stat-lbl">平均完成度</div></div>' +
+    '<div class="dash-stat"><div class="dash-stat-num" style="color:var(--green)">' + done + '</div><div class="dash-stat-lbl">已完成</div></div>' +
+    '<div class="dash-stat"><div class="dash-stat-num" style="color:var(--accent2)">' + inProg + '</div><div class="dash-stat-lbl">進行中</div></div>' +
+    '<div class="dash-stat"><div class="dash-stat-num" style="color:var(--red)">' + delayed + '</div><div class="dash-stat-lbl">已延遲</div></div>' +
+    '</div>' +
+    '<div class="status-bar-wrap">' +
+    (total>0 ? [
+      ['#0d9e62', done/total*100],
+      ['#60a5fa', inProg/total*100],
+      ['#94a3b8', notStart/total*100],
+      ['#e11d48', delayed/total*100]
+    ].map(([c,w]) => '<div class="status-seg" style="background:'+c+';width:'+w.toFixed(1)+'%;flex:'+(w>0?1:0)+'"></div>').join('') : '') +
+    '</div>' +
+    '<div class="status-legend">' +
+    [['#0d9e62','已完成'],['#60a5fa','進行中'],['#94a3b8','未開始'],['#e11d48','已延遲']]
+    .map(([c,l]) => '<div class="status-legend-item"><div class="status-legend-dot" style="background:'+c+'"></div>'+l+'</div>').join('') +
+    '</div>';
+  body.appendChild(statsCard);
+
+  // Per project card
+  if(projects.length > 0) {
+    const projCard = document.createElement('div');
+    projCard.className = 'dash-card';
+    let projHtml = '<div class="dash-card-title">專案進度</div>';
+    projects.forEach(p => {
+      const pTasks = tasks.filter(t => t.projectId === p.id);
+      const pPct = pTasks.length > 0 ? Math.round(pTasks.reduce((s,t)=>s+t.progress,0)/pTasks.length) : 0;
+      projHtml += '<div class="dash-proj-row">' +
+        '<div style="display:flex;align-items:center;gap:5px;width:90px;flex-shrink:0">' +
+        '<div style="width:7px;height:7px;border-radius:50%;background:'+p.color+';flex-shrink:0"></div>' +
+        '<div class="dash-proj-name">'+p.name+'</div></div>' +
+        '<div class="dash-prog-track"><div class="dash-prog-fill" style="width:'+pPct+'%;background:'+p.color+'"></div></div>' +
+        '<div class="dash-prog-pct">'+pPct+'%</div></div>';
+    });
+    projCard.innerHTML = projHtml;
+    body.appendChild(projCard);
+  }
+
+  // Upcoming deadlines card
+  if(upcoming.length > 0) {
+    const dlCard = document.createElement('div');
+    dlCard.className = 'dash-card';
+    let dlHtml = '<div class="dash-card-title">即將截止</div>';
+    upcoming.forEach(t => {
+      const cls = t.daysLeft <= 3 ? 'dl-red' : t.daysLeft <= 7 ? 'dl-amber' : 'dl-green';
+      const label = t.daysLeft === 0 ? '今天' : t.daysLeft + ' 天後';
+      dlHtml += '<div class="dash-deadline-item">' +
+        '<div class="dash-dl-name">'+t.name+'</div>' +
+        '<span class="dash-dl-badge '+cls+'">'+label+'</span></div>';
+    });
+    dlCard.innerHTML = dlHtml;
+    body.appendChild(dlCard);
+  }
+
+  // Priority summary
+  const highPri = tasks.filter(t => t.priority === 'high' && t.status !== 'done');
+  if(highPri.length > 0) {
+    const priCard = document.createElement('div');
+    priCard.className = 'dash-card';
+    let priHtml = '<div class="dash-card-title">🔴 高優先任務 (' + highPri.length + ')</div>';
+    highPri.slice(0,5).forEach(t => {
+      priHtml += '<div style="padding:5px 0;border-bottom:1px solid var(--border);font-size:12px;color:var(--text)">'+t.name+'</div>';
+    });
+    priCard.innerHTML = priHtml;
+    body.appendChild(priCard);
+  }
+}
+
+// ── Notifications ────────────────────────────────────────────────────
+let notifEnabled = false;
+async function toggleNotifications() {
+  if(!('Notification' in window)) { alert('此瀏覽器不支援通知功能'); return; }
+  if(Notification.permission === 'granted') {
+    notifEnabled = !notifEnabled;
+    updateNotifBtn();
+    if(notifEnabled) checkAndNotify();
+  } else if(Notification.permission !== 'denied') {
+    const perm = await Notification.requestPermission();
+    if(perm === 'granted') { notifEnabled = true; updateNotifBtn(); checkAndNotify(); }
+  } else {
+    alert('請在瀏覽器設定中允許通知權限');
+  }
+}
+function updateNotifBtn() {
+  const btn = document.getElementById('notif-btn');
+  const badge = document.getElementById('notif-badge');
+  if(btn) btn.style.color = notifEnabled ? 'var(--accent)' : '';
+  const urgentCount = tasks.filter(t => {
+    const d = Math.round((parseD(t.end)-new Date())/86400000);
+    return d >= 0 && d <= 3 && t.status !== 'done';
+  }).length;
+  if(badge) { badge.textContent = urgentCount; badge.classList.toggle('show', urgentCount > 0); }
+}
+function checkAndNotify() {
+  if(!notifEnabled || Notification.permission !== 'granted') return;
+  const now = new Date(); now.setHours(0,0,0,0);
+  tasks.forEach(tk => {
+    const d = Math.round((parseD(tk.end)-now)/86400000);
+    if(d >= 0 && d <= 3 && tk.status !== 'done') {
+      new Notification('ResearchFlow 截止提醒', {
+        body: '「'+tk.name+'」' + (d===0?'今天截止！':'還有 '+d+' 天截止'),
+        icon: ''
+      });
+    }
+  });
+}
+
+// ── Print/PDF ────────────────────────────────────────────────────────
+function printGantt() {
+  window.print();
+}
+
+// ── Override saveData to also saveToUndo for undo support ────────────
+const _origDeleteTask = deleteTask;
+
+// ── Boot ──────────────────────────────────────────────────────────────
+// 先套用薄荷主題讓 CSS 變數正確，再 render
+const _defaultMint = BG_PRESETS.find(p=>p.name==='薄荷');
+if(_defaultMint) {
+  const _saved = localStorage.getItem('rf_theme');
+  if(!_saved) applyBg(_defaultMint.bg, _defaultMint);
+  else loadTheme();
+} else {
+  loadTheme();
+}
+render();
+renderThemePresets();
+setTimeout(updateNotifBtn, 1000);
+setTimeout(scrollToToday,100);
+</script>
+
+<script type="module">
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut as fbSignOut }
+  from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js';
+import { getFirestore, doc, setDoc, getDoc, onSnapshot }
+  from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAUoZaUW_XzmnpLdTvYrhzjI1fCC6ZGbiE",
+  authDomain: "researchflow-2c14b.firebaseapp.com",
+  projectId: "researchflow-2c14b",
+  storageBucket: "researchflow-2c14b.firebasestorage.app",
+  messagingSenderId: "1011617587491",
+  appId: "1:1011617587491:web:ad1e3244a21e6839786c96",
+  measurementId: "G-CP4D4EPGMN"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+let currentUser = null;
+let unsubSnapshot = null;
+let saveTimer = null;
+
+// expose to global scope
+window.enterGuestMode = () => {
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'flex';
+  const nameEl = document.getElementById('user-name');
+  const avatarEl = document.getElementById('user-avatar');
+  if(nameEl) nameEl.innerHTML = '訪客模式 <span class="guest-badge">LOCAL</span>';
+  // 強制換成訪客文字頭貼
+  const newAv = document.createElement('div');
+  newAv.className = 'user-avatar-placeholder';
+  newAv.id = 'user-avatar';
+  newAv.textContent = '訪';
+  newAv.style.cssText = 'background:var(--accent);font-size:11px';
+  avatarEl.replaceWith(newAv);
+  const dot = document.getElementById('sync-dot');
+  if(dot) dot.style.display = 'none';
+  window._isGuest = true;
+  const lbtn=document.getElementById('logout-btn');if(lbtn)lbtn.textContent='離開訪客';
+  // 訪客模式：載入訪客專屬資料（跟 Google 帳號完全獨立）
+  try {
+    const guestData = localStorage.getItem('rf_guest');
+    if(guestData) {
+      const d = JSON.parse(guestData);
+      projects = d.projects || [];
+      tasks = d.tasks || [];
+    } else {
+      // 第一次用訪客：給乾淨空白
+      projects = [];
+      tasks = [];
+    }
+    window.projects = projects;
+    window.tasks = tasks;
+  } catch(e) { projects=[]; tasks=[]; window.projects=[]; window.tasks=[]; }
+  if(window.render) window.render();
+};
+
+window.signInWithGoogle = async () => {
+  try {
+    document.getElementById('login-error').textContent = '';
+    const provider = new GoogleAuthProvider();
+    await signInWithPopup(auth, provider);
+  } catch(e) {
+    document.getElementById('login-error').textContent = '登入失敗，請再試一次';
+    console.error(e);
+  }
+};
+
+window.signOut = async () => {
+  if(window._isGuest) {
+    window._isGuest = false;
+    // 切回登入頁，Google 帳號資料不受影響
+    document.getElementById('app').style.display = 'none';
+    document.getElementById('login-screen').style.display = 'flex';
+    const dot = document.getElementById('sync-dot');
+    if(dot) dot.style.display = '';
+    // 重新載入 Google 帳號的資料
+    try {
+      const d = localStorage.getItem('rf_v3');
+      if(d) { const p=JSON.parse(d); projects=p.projects||[]; tasks=p.tasks||[]; }
+      else { projects=[]; tasks=[]; }
+      window.projects=projects; window.tasks=tasks;
+    } catch(e){}
+    return;
+  }
+  if(unsubSnapshot) { unsubSnapshot(); unsubSnapshot = null; }
+  await fbSignOut(auth);
+};
+
+// called from main app when data changes
+window.cloudSave = (data) => {
+  if(window._isGuest) return; // 訪客模式只存本機
+  if(!currentUser) return;
+  clearTimeout(saveTimer);
+  setSyncing(true);
+  saveTimer = setTimeout(async () => {
+    try {
+      await setDoc(doc(db, 'users', currentUser.uid, 'data', 'main'), data);
+      setSyncing(false);
+    } catch(e) { console.error('Save error', e); setSyncing(false); }
+  }, 800);
+};
+
+function setSyncing(s) {
+  const dot = document.getElementById('sync-dot');
+  if(dot) dot.classList.toggle('syncing', s);
+}
+
+onAuthStateChanged(auth, async (user) => {
+  currentUser = user;
+  if(user) {
+    // show app, hide login
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('app').style.display = 'flex';
+
+    // update user bar
+    const nameEl = document.getElementById('user-name');
+    const avatarEl = document.getElementById('user-avatar');
+    if(nameEl) nameEl.textContent = user.displayName || user.email;
+    const lbtn2 = document.getElementById('logout-btn'); if(lbtn2) lbtn2.textContent = '登出';
+    if(avatarEl) {
+      if(user.photoURL) {
+        avatarEl.outerHTML = '<img class="user-avatar" id="user-avatar" src="'+user.photoURL+'">';
+      } else {
+        avatarEl.textContent = (user.displayName||'U')[0].toUpperCase();
+      }
+    }
+
+    // load data from Firestore
+    setSyncing(true);
+    if(unsubSnapshot) unsubSnapshot();
+    unsubSnapshot = onSnapshot(doc(db, 'users', user.uid, 'data', 'main'), (snap) => {
+      if(snap.exists()) {
+        const d = snap.data();
+        if(d.projects && d.tasks) {
+          // 同步到本地變數
+          projects = d.projects;
+          tasks = d.tasks;
+          window.projects = d.projects;
+          window.tasks = d.tasks;
+          if(window.render) window.render();
+        }
+      } else {
+        // 新用戶：清空範例資料，給一個乾淨的空白開始
+        projects = [];
+        tasks = [];
+        window.projects = [];
+        window.tasks = [];
+        if(window.render) window.render();
+        // 不儲存，等用戶新增第一個專案後才儲存
+      }
+      setSyncing(false);
+    });
+
+  } else {
+    // not logged in
+    document.getElementById('login-screen').style.display = 'flex';
+    document.getElementById('app').style.display = 'none';
+  }
+});
+</script>
+
+
+<div class="theme-popup-overlay" id="theme-popup-overlay" onclick="closeThemePanel()"></div>
+<div class="theme-popup" id="theme-popup">
+  <div class="theme-popup-header">
+    <span class="theme-popup-title">背景顏色</span>
+    <button class="theme-popup-close" onclick="closeThemePanel()">×</button>
+  </div>
+  <div class="theme-popup-body">
+    <div class="theme-popup-group-label">深色</div>
+    <div class="theme-presets-dark" id="theme-presets-dark"></div>
+    <div class="theme-popup-group-label" style="margin-top:16px">淺色</div>
+    <div class="theme-presets-light" id="theme-presets-light"></div>
+    <div class="theme-popup-divider"></div>
+    <div class="theme-popup-group-label">自訂顏色</div>
+    <div class="custom-color-row">
+      <span class="custom-color-label">選擇任意顏色</span>
+      <input type="color" class="custom-color-input" id="custom-bg-input" oninput="applyBg(this.value,null)">
+    </div>
+  </div>
+</div>
+</body>
+</html>
