@@ -590,6 +590,554 @@ aside{border-radius:0 16px 16px 0}
   .topbar .ctrl-btn{font-size:10px!important;padding:4px 7px!important}
   .topbar h1{font-size:12px!important}
 }
+
+/* ══════════════════════════════════════════════════
+   Apple HIG Design System
+   ══════════════════════════════════════════════════ */
+
+/* 字體系統 */
+body {
+  font-family: -apple-system, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+/* ── 全域圓角升級 ── */
+:root {
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 100px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+  --shadow-xl: 0 16px 40px rgba(0,0,0,.14), 0 8px 16px rgba(0,0,0,.08);
+}
+
+/* ── Sidebar ── */
+aside {
+  background: rgba(245,242,235,.92) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-right: 0.5px solid rgba(0,0,0,.1) !important;
+  box-shadow: 1px 0 0 rgba(255,255,255,.6) inset, var(--shadow-md) !important;
+}
+.sidebar-header {
+  background: transparent !important;
+  border-bottom: 0.5px solid rgba(0,0,0,.08) !important;
+  padding: 18px 16px 14px !important;
+}
+.logo {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* ── 專案列表 ── */
+.proj-item {
+  border-radius: var(--radius-md) !important;
+  padding: 9px 12px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  transition: all .2s cubic-bezier(.25,.46,.45,.94) !important;
+}
+.proj-item.active {
+  background: rgba(13,158,98,.12) !important;
+  border-left: none !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+.proj-item:hover {
+  background: rgba(0,0,0,.05) !important;
+  transform: none !important;
+}
+.proj-dot { width: 9px !important; height: 9px !important; }
+
+/* ── Topbar ── */
+.topbar {
+  background: rgba(245,242,235,.85) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-bottom: 0.5px solid rgba(0,0,0,.1) !important;
+  padding: 10px 20px !important;
+  box-shadow: 0 0.5px 0 rgba(255,255,255,.8) inset !important;
+}
+.topbar h1 {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ── 按鈕系統 ── */
+.ctrl-btn {
+  background: rgba(255,255,255,.85) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 0.5px solid rgba(0,0,0,.12) !important;
+  border-radius: var(--radius-full) !important;
+  color: var(--text) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 5px 12px !important;
+  box-shadow: var(--shadow-sm), 0 0.5px 0 rgba(255,255,255,.9) inset !important;
+  transition: all .18s cubic-bezier(.25,.46,.45,.94) !important;
+  letter-spacing: -0.01em !important;
+}
+.ctrl-btn:hover {
+  background: rgba(255,255,255,.95) !important;
+  box-shadow: var(--shadow-md), 0 0.5px 0 rgba(255,255,255,.9) inset !important;
+  transform: translateY(-0.5px) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+.ctrl-btn:active { transform: scale(.97) !important; }
+
+/* ── View Tabs ── */
+.view-tabs {
+  background: rgba(0,0,0,.06) !important;
+  border-radius: var(--radius-full) !important;
+  padding: 3px !important;
+  border: none !important;
+}
+.view-tab {
+  border-radius: var(--radius-full) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding: 4px 12px !important;
+  transition: all .2s !important;
+}
+.view-tab.active {
+  background: white !important;
+  box-shadow: var(--shadow-sm) !important;
+  color: var(--accent) !important;
+  font-weight: 600 !important;
+}
+
+/* ── 搜尋框 ── */
+.search-input {
+  background: rgba(255,255,255,.8) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 0.5px solid rgba(0,0,0,.1) !important;
+  border-radius: var(--radius-full) !important;
+  font-size: 12px !important;
+  padding: 6px 28px !important;
+  box-shadow: var(--shadow-sm) !important;
+  color: var(--text) !important;
+}
+.search-input:focus {
+  border-color: var(--accent) !important;
+  background: rgba(255,255,255,.95) !important;
+  box-shadow: 0 0 0 3px rgba(13,158,98,.12), var(--shadow-sm) !important;
+}
+
+/* ── Gantt Header ── */
+.gh-wrap {
+  background: rgba(245,242,235,.9) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 0.5px solid rgba(0,0,0,.1) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,.6) inset !important;
+}
+.gh-month-cell {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  color: var(--muted) !important;
+}
+.gh-day {
+  font-size: 10px !important;
+  font-weight: 500 !important;
+}
+.gh-day.today-col {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  background: rgba(13,158,98,.1) !important;
+}
+
+/* ── 任務列 ── */
+.task-row {
+  transition: background .15s ease !important;
+  border-bottom: 0.5px solid rgba(0,0,0,.06) !important;
+}
+.task-row:hover {
+  background: rgba(13,158,98,.05) !important;
+  box-shadow: inset 3px 0 0 var(--accent) !important;
+}
+.task-row.selected {
+  background: rgba(13,158,98,.08) !important;
+  box-shadow: inset 3px 0 0 var(--accent) !important;
+}
+.task-name {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em !important;
+}
+.sbadge {
+  border-radius: var(--radius-full) !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  padding: 2px 8px !important;
+  letter-spacing: 0 !important;
+}
+
+/* ── 專案標題列 ── */
+.proj-hdr {
+  background: rgba(13,158,98,.06) !important;
+  border-bottom: 0.5px solid rgba(0,0,0,.06) !important;
+  padding: 9px 14px !important;
+}
+.ph-name {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+.ph-add-btn {
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: var(--radius-full) !important;
+  font-size: 15px !important;
+  border: 1.5px solid var(--accent) !important;
+}
+
+/* ── 甘特圖 Bar ── */
+.bar {
+  border-radius: 8px !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15), 0 0.5px 0 rgba(255,255,255,.3) inset !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+}
+.bar:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,.2), 0 0.5px 0 rgba(255,255,255,.3) inset !important;
+  filter: brightness(1.06) !important;
+}
+
+/* ── Detail Panel ── */
+.detail-panel {
+  background: rgba(252,251,248,.95) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border-left: 0.5px solid rgba(0,0,0,.1) !important;
+  box-shadow: var(--shadow-xl) !important;
+}
+.dp-hdr {
+  background: transparent !important;
+  border-bottom: 0.5px solid rgba(0,0,0,.08) !important;
+  padding: 16px 18px !important;
+}
+.dp-title {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+.dp-lbl {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+}
+.dp-in, .dp-sel, .dp-ta {
+  background: rgba(255,255,255,.9) !important;
+  border: 0.5px solid rgba(0,0,0,.12) !important;
+  border-radius: var(--radius-md) !important;
+  font-size: 13px !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all .18s !important;
+}
+.dp-in:focus, .dp-ta:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(13,158,98,.12) !important;
+}
+.dp-save {
+  border-radius: var(--radius-full) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding: 10px !important;
+  background: var(--accent) !important;
+  box-shadow: 0 2px 8px rgba(13,158,98,.35), 0 0.5px 0 rgba(255,255,255,.3) inset !important;
+  letter-spacing: -0.01em !important;
+}
+.dp-save:hover {
+  box-shadow: 0 4px 14px rgba(13,158,98,.45) !important;
+  transform: translateY(-1px) !important;
+}
+.dp-del {
+  border-radius: var(--radius-full) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  border: 0.5px solid rgba(0,0,0,.12) !important;
+  background: rgba(255,255,255,.8) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+.prog-track {
+  height: 4px !important;
+  border-radius: var(--radius-full) !important;
+  background: rgba(0,0,0,.08) !important;
+}
+.prog-fill {
+  border-radius: var(--radius-full) !important;
+}
+.warn-box {
+  border-radius: var(--radius-md) !important;
+  border: none !important;
+  background: rgba(225,29,72,.08) !important;
+  font-size: 12px !important;
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  background: rgba(0,0,0,.25) !important;
+}
+.modal {
+  background: rgba(252,251,248,.96) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 0.5px solid rgba(255,255,255,.8) !important;
+  border-radius: 24px !important;
+  box-shadow: var(--shadow-xl), 0 0.5px 0 rgba(255,255,255,.9) inset !important;
+}
+.modal h2 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+.mi {
+  background: rgba(255,255,255,.85) !important;
+  border: 0.5px solid rgba(0,0,0,.12) !important;
+  border-radius: var(--radius-md) !important;
+  font-size: 13px !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+.mi:focus { border-color: var(--accent) !important; box-shadow: 0 0 0 3px rgba(13,158,98,.12) !important; }
+.m-confirm {
+  border-radius: var(--radius-full) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding: 7px 18px !important;
+  box-shadow: 0 2px 8px rgba(13,158,98,.3) !important;
+}
+.m-cancel {
+  border-radius: var(--radius-full) !important;
+  background: rgba(0,0,0,.06) !important;
+  border: none !important;
+  font-size: 13px !important;
+}
+
+/* ── Date Picker ── */
+.datepicker-btn {
+  background: rgba(255,255,255,.85) !important;
+  border: 0.5px solid rgba(0,0,0,.12) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm) !important;
+  font-size: 13px !important;
+}
+.datepicker-pop {
+  background: rgba(252,251,248,.97) !important;
+  backdrop-filter: blur(24px) !important;
+  border: 0.5px solid rgba(0,0,0,.1) !important;
+  border-radius: 18px !important;
+  box-shadow: var(--shadow-xl) !important;
+}
+.dp-nav-btn {
+  border-radius: var(--radius-sm) !important;
+  background: rgba(0,0,0,.05) !important;
+  border: none !important;
+}
+.dp-day {
+  border-radius: var(--radius-sm) !important;
+  font-size: 12px !important;
+}
+.dp-day.selected {
+  background: var(--accent) !important;
+  box-shadow: 0 2px 6px rgba(13,158,98,.3) !important;
+}
+.dp-day.today { border: 1.5px solid var(--accent) !important; }
+
+/* ── Theme Popup ── */
+.theme-popup {
+  background: rgba(252,251,248,.97) !important;
+  backdrop-filter: blur(24px) !important;
+  border: 0.5px solid rgba(0,0,0,.1) !important;
+  border-radius: 20px !important;
+  box-shadow: var(--shadow-xl) !important;
+}
+.theme-open-btn {
+  background: rgba(255,255,255,.7) !important;
+  border: 0.5px solid rgba(0,0,0,.1) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+/* ── Alert Banner ── */
+.alert-banner {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* ── User Bar ── */
+.user-bar {
+  border-top: 0.5px solid rgba(0,0,0,.08) !important;
+  padding: 12px 14px !important;
+}
+.user-name {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+.logout-btn {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  border-radius: var(--radius-full) !important;
+  padding: 3px 8px !important;
+  background: rgba(0,0,0,.05) !important;
+}
+.logout-btn:hover { background: rgba(225,29,72,.1) !important; }
+
+/* ── Add Button ── */
+.add-btn {
+  border-radius: var(--radius-md) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  background: rgba(255,255,255,.5) !important;
+  border: 0.5px dashed rgba(0,0,0,.18) !important;
+}
+.add-btn:hover {
+  background: rgba(13,158,98,.08) !important;
+  border-color: var(--accent) !important;
+}
+
+/* ── Login Screen ── */
+#login-screen {
+  background: linear-gradient(145deg, #f0f7f4 0%, #f5f2eb 50%, #e8f4ed 100%) !important;
+}
+.login-card {
+  background: rgba(255,255,255,.85) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 0.5px solid rgba(255,255,255,.9) !important;
+  box-shadow: var(--shadow-xl), 0 0.5px 0 rgba(255,255,255,.9) inset !important;
+  border-radius: 28px !important;
+}
+.google-btn {
+  border-radius: var(--radius-full) !important;
+  box-shadow: var(--shadow-sm), 0 0.5px 0 rgba(255,255,255,.9) inset !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em !important;
+  border: 0.5px solid rgba(0,0,0,.12) !important;
+}
+.guest-btn {
+  border-radius: var(--radius-full) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+/* ── Mobile Bar ── */
+.mobile-bar {
+  background: rgba(245,242,235,.92) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-top: 0.5px solid rgba(0,0,0,.1) !important;
+  box-shadow: 0 -0.5px 0 rgba(255,255,255,.6) inset !important;
+}
+.mobile-bar-btn {
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.01em !important;
+  border-radius: var(--radius-md) !important;
+  padding: 6px 10px !important;
+}
+.mobile-bar-btn .mb-icon { font-size: 20px !important; }
+
+/* ── Dashboard Panel ── */
+.dash-panel {
+  background: rgba(252,251,248,.97) !important;
+  backdrop-filter: blur(24px) !important;
+  border-left: 0.5px solid rgba(0,0,0,.1) !important;
+  box-shadow: var(--shadow-xl) !important;
+}
+.dash-card {
+  background: rgba(255,255,255,.8) !important;
+  border: 0.5px solid rgba(0,0,0,.08) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+.dash-hdr-title {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+.dash-stat-num {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* ── Undo Toast ── */
+.undo-toast {
+  background: rgba(30,30,30,.88) !important;
+  backdrop-filter: blur(16px) !important;
+  border: none !important;
+  color: white !important;
+  border-radius: var(--radius-full) !important;
+  box-shadow: var(--shadow-lg) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+.undo-btn-toast {
+  background: rgba(255,255,255,.2) !important;
+  border-radius: var(--radius-full) !important;
+  color: white !important;
+  font-size: 11px !important;
+}
+
+/* ── Notif Button ── */
+.notif-btn {
+  border-radius: var(--radius-full) !important;
+  border: 0.5px solid rgba(0,0,0,.12) !important;
+  background: rgba(255,255,255,.85) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,.18); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,.28); }
+
+/* ── Selection color ── */
+::selection { background: rgba(13,158,98,.2); }
+
+/* ── Mobile 毛玻璃 topbar ── */
+@media(max-width:768px) {
+  .topbar {
+    background: rgba(245,242,235,.88) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  }
+  .mobile-bar {
+    background: rgba(245,242,235,.92) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  }
+  .ctrl-btn { border-radius: var(--radius-full) !important; }
+  .mobile-menu-btn {
+    border-radius: var(--radius-md) !important;
+    background: rgba(255,255,255,.7) !important;
+    border: 0.5px solid rgba(0,0,0,.1) !important;
+  }
+  .detail-panel {
+    border-radius: 24px 24px 0 0 !important;
+    background: rgba(252,251,248,.98) !important;
+    backdrop-filter: blur(24px) !important;
+  }
+  aside {
+    border-radius: 0 24px 24px 0 !important;
+    background: rgba(245,242,235,.95) !important;
+  }
+}
 </style>
 </head>
 <body>
