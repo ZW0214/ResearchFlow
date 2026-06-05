@@ -2035,7 +2035,6 @@ function renderGantt() {
     }
   });
   root.appendChild(body);
-
   // 建立左側固定欄
   if(leftPanel) {
     // 左欄 header
@@ -2141,10 +2140,24 @@ function openDetail(id){
     <div class="dp-field"><div class="dp-lbl">任務名稱</div><input class="dp-in" id="dp-name" value="${tk.name}"></div>
     <div class="dp-field"><div class="dp-lbl">開始日期</div><div id="dp-start-picker"></div></div>
     <div class="dp-field"><div class="dp-lbl">截止日期</div><div id="dp-end-picker"></div></div>
-    <div class="dp-field"><div class="dp-lbl">狀態</div>
-      <select class="dp-sel" id="dp-status">
-        ${STATUS_OPT.map(s=>`<option value="${s}"${tk.status===s?' selected':''}>${STATUS_LABEL[s]}</option>`).join('')}
-      </select>
+    <div style="display:flex;gap:10px">
+      <div class="dp-field" style="flex:1"><div class="dp-lbl">狀態</div>
+        <select class="dp-sel" id="dp-status">
+          ${STATUS_OPT.map(s=>`<option value="${s}"${tk.status===s?' selected':''}>${STATUS_LABEL[s]}</option>`).join('')}
+        </select>
+      </div>
+      <div class="dp-field" style="flex:1"><div class="dp-lbl">優先級</div>
+        <select class="dp-sel" id="dp-priority">
+          <option value=""${(tk.priority||'')==''?' selected':''}>無</option>
+          <option value="high"${tk.priority==='high'?' selected':''}>🔴 高</option>
+          <option value="medium"${tk.priority==='medium'?' selected':''}>🟡 中</option>
+          <option value="low"${tk.priority==='low'?' selected':''}>🟢 低</option>
+        </select>
+      </div>
+    </div>
+    <div class="dp-field" style="flex-direction:row;align-items:center;gap:8px">
+      <input type="checkbox" id="dp-milestone" ${tk.milestone?'checked':''} style="width:16px;height:16px;accent-color:var(--accent)">
+      <div class="dp-lbl" style="text-transform:none;letter-spacing:0;font-size:12px">🏁 設為里程碑</div>
     </div>
     <div class="dp-field">
       <div class="dp-lbl">進度：<span id="dp-pv">${tk.progress}%</span></div>
@@ -2178,10 +2191,13 @@ function saveDetail(id){
   if(dpStart)tk.start=dpStart.getValue();
   if(dpEnd)tk.end=dpEnd.getValue();
   tk.status=document.getElementById('dp-status').value;
-  tk.priority=document.getElementById('dp-priority').value;
-  tk.milestone=document.getElementById('dp-milestone').checked;
+  const priEl=document.getElementById('dp-priority');
+  if(priEl) tk.priority=priEl.value;
+  const msEl=document.getElementById('dp-milestone');
+  if(msEl) tk.milestone=msEl.checked;
   tk.progress=parseInt(document.getElementById('dp-prog').value);
-  tk.url=document.getElementById('dp-url').value;
+  const urlEl=document.getElementById('dp-url');
+  if(urlEl) tk.url=urlEl.value;
   tk.notes=document.getElementById('dp-notes').value;
   saveData();checkAlerts();openDetail(id);
 }
@@ -2211,13 +2227,16 @@ function checkAlerts(){
 
 // ── Scroll to today ───────────────────────────────────────────────────
 function scrollToToday(){
-  buildViewDays();
-  const i = dateIdx(todayStr());
-  if(i < 0) return;
-  const scroll = document.getElementById('gantt-scroll');
+  var scroll = document.getElementById('gantt-scroll');
   if(!scroll) return;
-  const target = Math.max(0, i * DAY_W - scroll.clientWidth / 2 + DAY_W / 2);
+  var i = dateIdx(todayStr());
+  if(i < 0) return;
+  // 強制 layout reflow 取得正確尺寸
+  var w = scroll.clientWidth;
+  var target = Math.max(0, i * DAY_W - w / 2 + DAY_W / 2);
   scroll.scrollLeft = target;
+  // 雙重確認（某些瀏覽器需要）
+  setTimeout(function(){ scroll.scrollLeft = target; }, 50);
 }
 window.scrollToToday = scrollToToday;
 
@@ -2507,7 +2526,7 @@ if(_defaultMint) {
 render();
 renderThemePresets();
 setTimeout(updateNotifBtn, 1000);
-setTimeout(scrollToToday, 400);
+setTimeout(scrollToToday, 600);
 </script>
 
 <script type="module">
@@ -2568,8 +2587,10 @@ window.enterGuestMode = () => {
     window.projects = projects;
     window.tasks = tasks;
   } catch(e) { projects=[]; tasks=[]; window.projects=[]; window.tasks=[]; }
-  if(window.render) window.render();
-  setTimeout(() => { if(window.scrollToToday) window.scrollToToday(); }, 600);
+  if(window.render) {
+    window.render();
+    setTimeout(function(){ if(window.scrollToToday) window.scrollToToday(); }, 800);
+  }
 };
 
 window.signInWithGoogle = async () => {
