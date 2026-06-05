@@ -1448,6 +1448,25 @@ aside {
 .cp-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:2px}
 .cp-dot{width:20px;height:20px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .18s;flex-shrink:0}
 .cp-dot.sel{border-color:#fff;transform:scale(1.2)}
+
+/* ── Detail Panel 關閉動畫 ── */
+@keyframes slideOutRight {
+  from { transform: translateX(0); opacity: 1; }
+  to   { transform: translateX(100%); opacity: 0; }
+}
+@keyframes slideOutDown {
+  from { transform: translateY(0); opacity: 1; }
+  to   { transform: translateY(100%); opacity: 0; }
+}
+.detail-panel.closing {
+  animation: slideOutRight .22s cubic-bezier(.25,.46,.45,.94) forwards !important;
+  pointer-events: none !important;
+}
+@media(max-width:768px){
+  .detail-panel.closing {
+    animation: slideOutDown .22s cubic-bezier(.25,.46,.45,.94) forwards !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -2035,6 +2054,10 @@ function renderGantt() {
     }
   });
   root.appendChild(body);
+
+  // 每次 render 後確保 gantt-root 寬度正確
+  root.style.width = totalW + 'px';
+
   // 建立左側固定欄
   if(leftPanel) {
     // 左欄 header
@@ -2103,6 +2126,18 @@ function renderGantt() {
       scroll.addEventListener('scroll', () => {
         leftPanel.scrollTop = scroll.scrollTop;
       });
+    }
+  }
+
+  // 初次捲到今天（每次 render 都檢查，但只在還沒捲過時執行）
+  if(!window._scrolledToToday) {
+    const sc = document.getElementById('gantt-scroll');
+    if(sc && sc.scrollWidth > sc.clientWidth) {
+      window._scrolledToToday = true;
+      const now = new Date(); now.setHours(0,0,0,0);
+      const start = new Date(now.getFullYear()-2, 0, 1);
+      const i = Math.round((now - start) / 86400000);
+      sc.scrollLeft = Math.max(0, i * DAY_W - sc.clientWidth / 2 + DAY_W / 2);
     }
   }
 }
@@ -2199,7 +2234,7 @@ function saveDetail(id){
   const urlEl=document.getElementById('dp-url');
   if(urlEl) tk.url=urlEl.value;
   tk.notes=document.getElementById('dp-notes').value;
-  saveData();checkAlerts();openDetail(id);
+  saveData();checkAlerts();renderGantt();closeDetail();
 }
 
 function deleteTask(id){
@@ -2211,9 +2246,14 @@ function deleteTask(id){
   showUndoToast('已刪除任務');
 }
 function closeDetail(){
-  selectedTaskId=null;dpStart=null;dpEnd=null;
-  document.getElementById('detail-panel').classList.add('hidden');
-  renderGantt();
+  const panel = document.getElementById('detail-panel');
+  panel.classList.add('closing');
+  setTimeout(() => {
+    panel.classList.add('hidden');
+    panel.classList.remove('closing');
+    selectedTaskId = null; dpStart = null; dpEnd = null;
+    renderGantt();
+  }, 220);
 }
 
 // ── Alerts ────────────────────────────────────────────────────────────
@@ -2229,14 +2269,12 @@ function checkAlerts(){
 function scrollToToday(){
   var scroll = document.getElementById('gantt-scroll');
   if(!scroll) return;
-  var i = dateIdx(todayStr());
-  if(i < 0) return;
-  // 強制 layout reflow 取得正確尺寸
-  var w = scroll.clientWidth;
-  var target = Math.max(0, i * DAY_W - w / 2 + DAY_W / 2);
-  scroll.scrollLeft = target;
-  // 雙重確認（某些瀏覽器需要）
-  setTimeout(function(){ scroll.scrollLeft = target; }, 50);
+  var now = new Date(); now.setHours(0,0,0,0);
+  var start = new Date(now.getFullYear()-2, 0, 1);
+  var i = Math.round((now - start) / 86400000);
+  var target = Math.max(0, i * DAY_W - scroll.clientWidth / 2 + DAY_W / 2);
+  scroll.scrollTo({left: target, behavior: 'smooth'});
+  window._scrolledToToday = true;
 }
 window.scrollToToday = scrollToToday;
 
@@ -2588,8 +2626,18 @@ window.enterGuestMode = () => {
     window.tasks = tasks;
   } catch(e) { projects=[]; tasks=[]; window.projects=[]; window.tasks=[]; }
   if(window.render) {
+    window._scrolledToToday = false;
     window.render();
-    setTimeout(function(){ if(window.scrollToToday) window.scrollToToday(); }, 800);
+    setTimeout(function(){
+      const scroll = document.getElementById('gantt-scroll');
+      if(!scroll) return;
+      const now = new Date(); now.setHours(0,0,0,0);
+      const start = new Date(now.getFullYear()-2, 0, 1);
+      const i = Math.round((now - start) / 86400000);
+      const DAY_W = 28;
+      scroll.scrollLeft = Math.max(0, i * DAY_W - scroll.clientWidth / 2 + DAY_W / 2);
+      window._initScrollDone = true;
+    }, 500);
   }
 };
 
@@ -2650,6 +2698,7 @@ onAuthStateChanged(auth, async (user) => {
     // show app, hide login
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('app').style.display = 'flex';
+    window._scrolledToToday = false;
 
     // update user bar
     const nameEl = document.getElementById('user-name');
@@ -2677,15 +2726,28 @@ onAuthStateChanged(auth, async (user) => {
           window.projects = d.projects;
           window.tasks = d.tasks;
           if(window.render) window.render();
+          // 第一次載入後捲到今天
+          if(!window._initScrollDone) {
+            window._initScrollDone = true;
+            setTimeout(() => {
+              const scroll = document.getElementById('gantt-scroll');
+              if(!scroll) return;
+              // 計算今天距離時間軸起點的天數
+              const now = new Date(); now.setHours(0,0,0,0);
+              const start = new Date(now.getFullYear()-2, 0, 1);
+              const i = Math.round((now - start) / 86400000);
+              const DAY_W = 28;
+              const target = Math.max(0, i * DAY_W - scroll.clientWidth / 2 + DAY_W / 2);
+              scroll.scrollLeft = target;
+              console.log('scroll to today: i='+i+' target='+target+' scrollLeft='+scroll.scrollLeft+' scrollWidth='+scroll.scrollWidth);
+            }, 500);
+          }
         }
       } else {
-        // 新用戶：清空範例資料，給一個乾淨的空白開始
-        projects = [];
-        tasks = [];
-        window.projects = [];
-        window.tasks = [];
+        projects = []; tasks = [];
+        window.projects = []; window.tasks = [];
         if(window.render) window.render();
-        // 不儲存，等用戶新增第一個專案後才儲存
+        window._initScrollDone = true;
       }
       setSyncing(false);
     });
@@ -2839,6 +2901,7 @@ onAuthStateChanged(auth, async (user) => {
     // show app, hide login
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('app').style.display = 'flex';
+    window._scrolledToToday = false;
 
     // update user bar
     const nameEl = document.getElementById('user-name');
@@ -2866,15 +2929,28 @@ onAuthStateChanged(auth, async (user) => {
           window.projects = d.projects;
           window.tasks = d.tasks;
           if(window.render) window.render();
+          // 第一次載入後捲到今天
+          if(!window._initScrollDone) {
+            window._initScrollDone = true;
+            setTimeout(() => {
+              const scroll = document.getElementById('gantt-scroll');
+              if(!scroll) return;
+              // 計算今天距離時間軸起點的天數
+              const now = new Date(); now.setHours(0,0,0,0);
+              const start = new Date(now.getFullYear()-2, 0, 1);
+              const i = Math.round((now - start) / 86400000);
+              const DAY_W = 28;
+              const target = Math.max(0, i * DAY_W - scroll.clientWidth / 2 + DAY_W / 2);
+              scroll.scrollLeft = target;
+              console.log('scroll to today: i='+i+' target='+target+' scrollLeft='+scroll.scrollLeft+' scrollWidth='+scroll.scrollWidth);
+            }, 500);
+          }
         }
       } else {
-        // 新用戶：清空範例資料，給一個乾淨的空白開始
-        projects = [];
-        tasks = [];
-        window.projects = [];
-        window.tasks = [];
+        projects = []; tasks = [];
+        window.projects = []; window.tasks = [];
         if(window.render) window.render();
-        // 不儲存，等用戶新增第一個專案後才儲存
+        window._initScrollDone = true;
       }
       setSyncing(false);
     });
