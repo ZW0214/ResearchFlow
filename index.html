@@ -1467,6 +1467,40 @@ aside {
     animation: slideOutDown .22s cubic-bezier(.25,.46,.45,.94) forwards !important;
   }
 }
+
+@media(max-width:768px){
+  .gantt-left{
+    width:110px!important;min-width:110px!important;
+  }
+  .gl-task{
+    padding:0 6px 0 10px!important;
+  }
+  .gl-task-name{
+    font-size:11px!important;
+  }
+  .gl-proj-hdr{
+    padding:6px 8px!important;
+  }
+  .gl-proj-name{
+    font-size:12px!important;
+  }
+  .gl-header{
+    padding:0 8px!important;
+    font-size:9px!important;
+  }
+  .gl-task-meta{
+    flex-wrap:wrap;gap:3px!important;
+  }
+  .gl-task-meta .sbadge{
+    font-size:8px!important;padding:1px 4px!important;
+  }
+  .gl-task-meta .pmini{
+    display:none!important;
+  }
+  .ph-add-btn{
+    width:20px!important;height:20px!important;font-size:13px!important;margin-right:4px!important;
+  }
+}
 </style>
 </head>
 <body>
@@ -2550,6 +2584,32 @@ function printGantt() {
 
 // ── Override saveData to also saveToUndo for undo support ────────────
 const _origDeleteTask = deleteTask;
+
+
+// ── 手機側欄抽屜 ──────────────────────────────────────────────────
+function toggleMobileDrawer() {
+  const aside = document.querySelector('aside');
+  const isOpen = aside.classList.contains('mobile-open');
+  if(isOpen) { closeMobileDrawer(); return; }
+  aside.classList.add('mobile-open');
+  setTimeout(() => {
+    document._drawerHandler = (e) => {
+      if(!aside.contains(e.target) && !e.target.closest('.mobile-menu-btn')) {
+        closeMobileDrawer();
+      }
+    };
+    document.addEventListener('click', document._drawerHandler);
+  }, 50);
+}
+function closeMobileDrawer() {
+  document.querySelector('aside').classList.remove('mobile-open');
+  if(document._drawerHandler) {
+    document.removeEventListener('click', document._drawerHandler);
+    document._drawerHandler = null;
+  }
+}
+window.toggleMobileDrawer = toggleMobileDrawer;
+window.closeMobileDrawer = closeMobileDrawer;
 
 // ── Boot ──────────────────────────────────────────────────────────────
 // 先套用薄荷主題讓 CSS 變數正確，再 render
